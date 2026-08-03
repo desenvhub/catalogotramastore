@@ -1,0 +1,236 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Trama Store - Catálogo</title><link rel="preconnect" href="https://www.gstatic.com" crossorigin><link rel="preconnect" href="https://familia-volei-default-rtdb.firebaseio.com"><link rel="dns-prefetch" href="https://www.gstatic.com"><link rel="dns-prefetch" href="https://familia-volei-default-rtdb.firebaseio.com"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui,-apple-system,sans-serif;background:#f8f6f4;color:#1a1a1a;line-height:1.5}.header{background:#141414;color:#fff;padding:14px 16px;text-align:left}.header-row{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{display:flex;align-items:center;gap:10px;min-width:0}.brand img{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:block}.brand-text{display:flex;flex-direction:column;min-width:0;justify-content:center}.brand-name{font-family:Georgia,'Palatino Linotype',Palatino,serif;font-size:15px;font-weight:700;letter-spacing:1.5px;color:#fff;line-height:1.2}.brand-name .store{font-family:Georgia,'Palatino Linotype',Palatino,serif;font-weight:400;font-style:italic;letter-spacing:0;color:#c9a96e}.brand-tagline{font-size:11px;color:#c9a96e;font-family:Palatino,Georgia,serif;font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.header-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.icon-circle-btn{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;border:none;cursor:pointer}.icon-circle-btn:hover{filter:brightness(1.08)}.icon-circle-btn.wpp{background:#25d366;animation:wppPulse 2s infinite}@keyframes wppPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{box-shadow:0 0 0 10px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}.icon-circle-btn.insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}.pdf-btn-label{display:flex;align-items:center;gap:4px;height:36px;padding:0 10px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:11px;font-weight:700;letter-spacing:.3px;cursor:pointer;flex-shrink:0}.pdf-btn-label:hover{background:rgba(255,255,255,.22)}.shop-wrap{display:flex;max-width:1300px;margin:0 auto;align-items:flex-start}.filters-toggle{display:none;align-items:center;justify-content:center;gap:7px;position:sticky;top:0;z-index:5;height:40px;padding:0 14px;background:#fff;color:#1C1916;border:1.5px solid #e8e1d3;border-radius:10px;font-family:inherit;font-size:12.5px;line-height:1.3;font-weight:700;letter-spacing:.2px;cursor:pointer;box-shadow:0 1px 3px rgba(28,25,22,.05)}.filters-toggle:hover{border-color:#c9a96e;box-shadow:0 2px 8px rgba(201,169,110,.18)}.filters-toggle svg{flex-shrink:0;color:#c9a96e}.sidebar{width:250px;flex-shrink:0;background:#fff;border-right:1px solid #eee;padding:18px 16px;position:sticky;top:0;max-height:100vh;overflow-y:auto}.sidebar-header{display:none;justify-content:space-between;align-items:center;margin-bottom:12px}.sidebar-close{background:none;border:none;font-size:22px;cursor:pointer;color:#333}.search-bar-side{margin-bottom:16px}.search-bar-side .search-input{width:100%;padding:10px 14px;border-radius:20px;border:1px solid #e0e0e0;font-size:13px;outline:none}.search-bar-side .search-input:focus{border-color:#c9a96e}.filter-group{margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid #f0f0f0}.filter-group-title{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:none;padding:0;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#1C1916;cursor:pointer;font-family:inherit}.filter-group-title .chev{transition:transform .2s ease;color:#c9a96e;flex-shrink:0}.filter-group.open .filter-group-title .chev{transform:rotate(180deg)}.filter-options{display:none;flex-direction:column;gap:6px;max-height:180px;overflow-y:auto;margin-top:10px}.filter-group.open .filter-options{display:flex}.filter-check{display:flex;align-items:center;gap:7px;font-size:13px;color:#444;cursor:pointer}.promo-filter-check{color:#e11d2e;font-weight:700;letter-spacing:.3px}.promo-filter-check input{accent-color:#e11d2e}.filter-check input{cursor:pointer}.filter-actions{display:flex;flex-direction:column;gap:8px;margin-top:6px}.apply-filters-btn{width:100%;padding:10px;background:#1C1916;color:#fff;border:1px solid #1C1916;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer}.apply-filters-btn:hover{background:#332e28}.clear-filters-btn{width:100%;padding:9px;background:#f0eee9;color:#1C1916;border:1px solid #ddd;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer}.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:8}.sidebar-overlay.open{display:block}.shop-main{flex:1;min-width:0}.toolbar{display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:14px 20px 16px;border-bottom:1px solid #eee}.sort-wrap{position:relative;display:flex;align-items:center}.sort-wrap .sort-icon{position:absolute;left:12px;color:#c9a96e;pointer-events:none}.sort-select{height:40px;padding:0 14px 0 34px;border-radius:10px;border:1.5px solid #e8e1d3;font-family:inherit;font-size:12.5px;line-height:1.3;color:#1C1916;background:#fff;outline:none;cursor:pointer;font-weight:700;letter-spacing:.2px;appearance:none;-webkit-appearance:none;-moz-appearance:none;box-shadow:0 1px 3px rgba(28,25,22,.05)}.sort-select:hover{border-color:#c9a96e}.sort-select:focus{border-color:#c9a96e;box-shadow:0 2px 8px rgba(201,169,110,.18)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;padding:20px}.card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #eee;transition:all .2s}.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}.card-esgotado{opacity:.75}.card-img{width:100%;height:260px;background:#f0f0f0;position:relative;overflow:hidden;cursor:pointer}.detail-view{display:none;position:fixed;inset:0;background:#000;z-index:50;flex-direction:column}.detail-view.active{display:flex}.detail-back{position:absolute;top:14px;left:14px;z-index:3;display:flex;align-items:center;gap:6px;padding:9px 16px;background:rgba(255,255,255,.94);color:#1C1916;border:none;border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}.detail-back:hover{background:#fff}.detail-img-wrap{flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:0}.detail-img-wrap img{max-width:100%;max-height:100%;object-fit:contain;display:block}.detail-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.85);color:#1C1916;border:none;width:38px;height:38px;border-radius:50%;font-size:17px;cursor:pointer;z-index:2}.detail-nav.prev{left:14px}.detail-nav.next{right:14px}.detail-dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}.detail-dots .dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4)}.detail-dots .dot.active{background:#fff}.detail-caption{padding:14px 20px;background:#fff;text-align:center;flex-shrink:0}.detail-caption .name{font-size:15px;font-weight:700;color:#1C1916}.detail-caption .info{font-size:12.5px;color:#888;margin-top:2px}.card-img>img{width:100%;height:260px;object-fit:cover;display:block}.card-img .gallery{display:flex;transition:transform .3s ease;height:260px;width:100%}.card-img .gallery img{min-width:100%;width:100%;height:260px;object-fit:cover;flex-shrink:0}.card-img .nav-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.4);color:#fff;border:none;width:28px;height:28px;cursor:pointer;font-size:14px;border-radius:50%;z-index:2}.card-img .nav-btn.prev{left:6px}.card-img .nav-btn.next{right:6px}.card-img .dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:4px;z-index:2}.card-img .dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5)}.card-img .dot.active{background:#fff}.foto-esgotado{filter:grayscale(100%)}.risco{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,transparent 45%,rgba(220,38,38,.4) 45%,rgba(220,38,38,.4) 55%,transparent 55%)}.badge{position:absolute;top:10px;left:10px;color:#fff;font-size:9px;font-weight:700;letter-spacing:.3px;padding:3px 8px;border-radius:4px;z-index:2}.badge.promo{background:#e11d2e}.badge.esgotado{background:#dc2626}.badge.novidade{background:#c9a96e}.card-info{padding:14px 16px 16px}.card-name{font-size:15px;font-weight:600;margin-bottom:2px}.card-color{font-size:12px;color:#888;margin-bottom:10px}.card-sizes{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.size-hint{font-size:10.5px;color:#999;margin-bottom:6px}.size-hint-opt{color:#bbb}.sz{padding:5px 10px;border-radius:6px;font-size:12px;font-weight:600;border:1.5px solid #e8e8e8;background:#fff;color:#444;cursor:pointer;font-family:inherit;transition:all .15s ease}.sz.ok{background:#ecfdf5;color:#15803d;border-color:#bbf7d0}.sz.ok:hover{border-color:#15803d}.sz.ok.selected{background:#1C1916;color:#fff;border-color:#1C1916}.sz.no{background:#fef2f2;color:#aaa;border-color:#fecaca;text-decoration:line-through}.card-prices{margin-bottom:10px}.promo-de{font-size:12px;color:#999;margin-bottom:2px}.promo-de-value{text-decoration:line-through}.promo-price{color:#e11d2e}.price-main-row{display:flex;align-items:baseline;gap:7px;margin-bottom:3px}.price-label{font-size:11px;color:#888}.price-main{font-size:20px;font-weight:800;letter-spacing:-.2px;font-variant-numeric:tabular-nums}.price-card-row{font-size:11px;color:#999}.price-card{font-size:11px;font-weight:700;letter-spacing:.1px;font-variant-numeric:tabular-nums;color:#999}.btn-peca-wpp{display:inline-flex;align-items:center;padding:8px 14px;background:#25d366;color:#fff;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600}.btn-peca-wpp:hover{background:#1da851}.btn-esgotado{display:inline-block;padding:8px 14px;background:#eee;color:#999;border-radius:6px;font-size:12px;font-weight:600}.empty{text-align:center;padding:60px 20px;color:#888;display:none}.footer{background:#1C1916;color:#aaa;padding:20px 20px;text-align:center;font-size:12px;margin-top:20px}.footer .f-brand{font-family:Georgia,'Palatino Linotype',Palatino,serif;font-size:16px;font-weight:700;color:#fff;letter-spacing:1.5px;margin-bottom:6px}.footer .f-brand .store{font-weight:400;font-style:italic;letter-spacing:0;color:#c9a96e}.footer .pagamentos{margin:8px 0;color:#ddd}.footer .politica{margin-top:8px;font-size:11px;color:#777;max-width:460px;margin-left:auto;margin-right:auto}@media(max-width:800px){.filters-toggle{display:flex;flex:1;min-width:0}.toolbar{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;padding:12px;gap:10px}.sort-wrap{flex:1;min-width:0}.sort-select{width:100%}.sidebar{position:fixed;top:0;left:0;height:100vh;max-height:100vh;width:82%;max-width:300px;z-index:9;transform:translateX(-100%);transition:transform .25s ease;box-shadow:2px 0 12px rgba(0,0,0,.15)}.sidebar.open{transform:translateX(0)}.sidebar-header{display:flex}.grid{grid-template-columns:repeat(2,1fr);gap:10px;padding:12px}.card-info{padding:10px 12px}.card-name{font-size:13px}.price-main{font-size:16px}.header{padding:12px 14px}.brand-name{font-size:14px}.brand-tagline{font-size:10px}}@media print{.filters-toggle,.toolbar,.sidebar,.sidebar-overlay,.btn-peca-wpp,.header-actions,.footer{display:none !important}.shop-wrap{display:block}.header{padding:20px;background:#1C1916 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.grid{grid-template-columns:repeat(3,1fr) !important}.card{break-inside:avoid}.card:hover{transform:none;box-shadow:none}#loadingState{text-align:center;padding:80px 20px;color:#999;font-size:14px;grid-column:1/-1}#loadingState .spin{width:34px;height:34px;border:3px solid #eee;border-top-color:#c9a96e;border-radius:50%;margin:0 auto 14px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}#errorState{display:none;text-align:center;padding:80px 20px;color:#c0392b;font-size:14px;grid-column:1/-1}}</style></head><body><header class="header"><div class="header-row"><div class="brand"><img src="https://desenvhub.github.io/trama-store/logo.png" width="40" height="40" style="border-radius:50%"><div class="brand-text"><span class="brand-name">TRAMA <span class="store">Store</span></span><span class="brand-tagline" id="brandTagline">Vista sua essência</span></div></div><div class="header-actions"><a href="https://wa.me/5532984701509?text=Ol%C3%A1!%20%F0%9F%91%8B%20Vi%20o%20cat%C3%A1logo%20da%20TRAMA%20Store%20e%20tenho%20interesse%20em%20alguns%20produtos.%20Pode%20me%20ajudar%3F%20%F0%9F%98%8A" class="icon-circle-btn wpp" id="headerWppLink" target="_blank" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="https://instagram.com/tramastore_" class="icon-circle-btn insta" target="_blank" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><button onclick="window.print()" class="pdf-btn-label" title="Salvar PDF"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>PDF</span></button></div></div></header><div class="shop-wrap"><aside class="sidebar" id="sidebarFilters"><div class="sidebar-header"><span>Filtros</span><button class="sidebar-close" id="sidebarClose">&times;</button></div><div class="search-bar-side"><input type="text" class="search-input" id="busca" placeholder="Buscar por nome, cor ou ref..."></div><div id="filterGroupsContainer"></div><div class="filter-actions"><button class="apply-filters-btn" id="applyFiltersBtn">Aplicar filtros</button><button class="clear-filters-btn" id="clearFiltersBtn">Limpar filtros</button></div></aside><div class="sidebar-overlay" id="sidebarOverlay"></div><div class="shop-main"><div class="toolbar"><button class="filters-toggle" id="filtersToggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg><span>Filtros</span></button><div class="sort-wrap"><svg class="sort-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg><select class="sort-select" id="ordenar"><option value="">Ordenar</option><option value="menor">Menor preco</option><option value="maior">Maior preco</option><option value="az">De A a Z</option></select></div></div><section class="grid" id="grid"><div id="loadingState"><div class="spin"></div>Carregando catalogo...</div></section><div id="errorState">Nao foi possivel carregar o catalogo agora. Tente novamente em instantes.</div><div class="empty" id="vazio"><p style="font-size:48px">&#128230;</p><p>Nenhuma peca encontrada</p></div></div></div><footer class="footer"><p class="f-brand">TRAMA <span class="store">Store</span></p><div class="pagamentos" id="footerPagamentos">Aceitamos: Pix | Cartao de credito/debito | Dinheiro</div><p class="politica" id="footerPolitica">Trocas em até 7 dias após o recebimento, mediante apresentação da peça em perfeito estado, sem indícios de uso e com as etiquetas originais.</p></footer><div class="detail-view" id="detailView"><button class="detail-back" id="detailBack"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg><span>Voltar</span></button><div class="detail-img-wrap" id="detailImgWrap"></div><div class="detail-caption"><div class="name" id="detailName"></div><div class="info" id="detailInfo"></div></div></div><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js" defer></script><script>function getChecked(cls){return Array.prototype.map.call(document.querySelectorAll("."+cls+":checked"),function(el){return el.value;});}function filtrarPecas(){var busca=(document.getElementById("busca").value||"").trim().toLowerCase();var categorias=getChecked("f-categoria");var subcategorias=getChecked("f-subcategoria");var generos=getChecked("f-genero");var tamanhos=getChecked("f-tamanho");var cores=getChecked("f-cor");var fPromoEl=document.getElementById("fPromo");var apenasPromo=fPromoEl?fPromoEl.checked:false;var fJeansEl=document.getElementById("fJeans");var apenasJeans=fJeansEl?fJeansEl.checked:false;var cards=document.querySelectorAll(".card");var visiveis=0;cards.forEach(function(card){var nome=card.getAttribute("data-nome");var cor=card.getAttribute("data-cor");var ref=card.getAttribute("data-ref");var categoria=card.getAttribute("data-categoria");var subcategoria=card.getAttribute("data-subcategoria");var genero=card.getAttribute("data-genero");var jeans=card.getAttribute("data-jeans")==="1";var sizes=","+card.getAttribute("data-sizes").toLowerCase()+",";var promo=card.getAttribute("data-promo")==="1";var matchBusca=!busca||nome.indexOf(busca)>=0||cor.indexOf(busca)>=0||ref.indexOf(busca)>=0;var matchCategoria=categorias.length===0||categorias.indexOf(categoria)>=0;var matchSubcategoria=subcategorias.length===0||subcategorias.indexOf(subcategoria)>=0;var matchGenero=generos.length===0||generos.indexOf(genero)>=0;var matchCor=cores.length===0||cores.indexOf(cor)>=0;var matchTamanho=tamanhos.length===0||tamanhos.some(function(t){return sizes.indexOf(","+t+",")>=0;});var matchPromo=!apenasPromo||promo;var matchJeans=!apenasJeans||jeans;if(matchBusca&&matchCategoria&&matchSubcategoria&&matchGenero&&matchCor&&matchTamanho&&matchPromo&&matchJeans){card.style.display="";visiveis++;}else{card.style.display="none";}});document.getElementById("vazio").style.display=visiveis===0?"block":"none";}function ordenarPecas(){var modo=document.getElementById("ordenar").value;var grid=document.getElementById("grid");var cards=Array.prototype.slice.call(grid.querySelectorAll(".card"));if(modo==="menor"){cards.sort(function(a,b){return parseFloat(a.getAttribute("data-price"))-parseFloat(b.getAttribute("data-price"));});}else if(modo==="maior"){cards.sort(function(a,b){return parseFloat(b.getAttribute("data-price"))-parseFloat(a.getAttribute("data-price"));});}else if(modo==="az"){cards.sort(function(a,b){return a.getAttribute("data-nome").localeCompare(b.getAttribute("data-nome"),"pt-BR");});}else{return;}cards.forEach(function(card){grid.appendChild(card);});}document.querySelectorAll(".filter-group-title").forEach(function(btn){btn.addEventListener("click",function(){btn.closest(".filter-group").classList.toggle("open");});});document.getElementById("busca").addEventListener("input",filtrarPecas);document.querySelectorAll(".f-categoria,.f-genero,.f-tamanho,.f-cor").forEach(function(el){el.addEventListener("change",filtrarPecas);});if(document.getElementById("fPromo")){document.getElementById("fPromo").addEventListener("change",filtrarPecas);}document.getElementById("ordenar").addEventListener("change",ordenarPecas);document.getElementById("applyFiltersBtn").addEventListener("click",function(){filtrarPecas();ordenarPecas();document.getElementById("sidebarFilters").classList.remove("open");document.getElementById("sidebarOverlay").classList.remove("open");});document.getElementById("clearFiltersBtn").addEventListener("click",function(){document.getElementById("busca").value="";document.querySelectorAll(".filter-options input[type=checkbox]").forEach(function(el){el.checked=false;});document.getElementById("ordenar").value="";filtrarPecas();ordenarPecas();});document.getElementById("filtersToggle").addEventListener("click",function(){document.getElementById("sidebarFilters").classList.add("open");document.getElementById("sidebarOverlay").classList.add("open");});document.getElementById("sidebarClose").addEventListener("click",function(){document.getElementById("sidebarFilters").classList.remove("open");document.getElementById("sidebarOverlay").classList.remove("open");});document.getElementById("sidebarOverlay").addEventListener("click",function(){document.getElementById("sidebarFilters").classList.remove("open");document.getElementById("sidebarOverlay").classList.remove("open");});var galTimers={};function startGalAutoplay(id){var gal=document.getElementById(id);if(!gal) return;var imgs=gal.querySelectorAll("img");if(imgs.length<2) return;galTimers[id]=setInterval(function(){slideGal(id,1);},4000);}function resetGalAutoplay(id){if(galTimers[id]){clearInterval(galTimers[id]);}startGalAutoplay(id);}function selectSize(btn){var card=btn.closest(".card");if(!card) return;var wasSelected=btn.classList.contains("selected");card.querySelectorAll(".sz.ok").forEach(function(b){b.classList.remove("selected");});var size=null;if(!wasSelected){btn.classList.add("selected");size=btn.getAttribute("data-size");}var link=card.querySelector(".btn-peca-wpp");if(!link) return;var base=link.getAttribute("data-basemsg")||"";var msg=size?(base+" - Tamanho: "+size):base;link.setAttribute("href","https://wa.me/5532984701509?text="+encodeURIComponent(msg));}function slideGal(id,dir){var gal=document.getElementById(id);var imgs=gal.querySelectorAll("img");var w=gal.parentElement.offsetWidth;var curr=Math.round(Math.abs(parseInt(gal.style.transform.replace("translateX(","").replace("px)",""))||0)/w);var next=curr+dir;if(next<0)next=imgs.length-1;if(next>=imgs.length)next=0;gal.style.transform="translateX(-"+(next*w)+"px)";var dots=gal.parentElement.querySelectorAll(".dot");dots.forEach(function(d,i){d.classList.toggle("active",i===next);});}var detailState={photos:[],index:0};function openDetail(card){var imgs=card.querySelectorAll(".card-img img");var photos=Array.prototype.map.call(imgs,function(img){return img.src;});if(photos.length===0) return;detailState={photos:photos,index:0};var nameEl=card.querySelector(".card-name");var infoEl=card.querySelector(".card-color");document.getElementById("detailName").textContent=nameEl?nameEl.textContent:"";document.getElementById("detailInfo").textContent=infoEl?infoEl.textContent:"";renderDetailImg();document.getElementById("detailView").classList.add("active");document.body.style.overflow="hidden";}function renderDetailImg(){var wrap=document.getElementById("detailImgWrap");var photos=detailState.photos, idx=detailState.index;var h='<img src="'+photos[idx]+'">';if(photos.length>1){h+='<button class="detail-nav prev" onclick="event.stopPropagation();detailNav(-1)">&#10094;</button>'+'<button class="detail-nav next" onclick="event.stopPropagation();detailNav(1)">&#10095;</button>'+'<div class="detail-dots">';for(var i=0;i<photos.length;i++){ h+='<span class="dot'+(i===idx?" active":"")+'"></span>'; }h+="</div>";}wrap.innerHTML=h;}function detailNav(dir){var n=detailState.photos.length;detailState.index=(detailState.index+dir+n)%n;renderDetailImg();}function closeDetail(){document.getElementById("detailView").classList.remove("active");document.body.style.overflow="";}document.getElementById("detailBack").addEventListener("click",closeDetail);document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeDetail(); });document.getElementById("grid").addEventListener("click",function(e){var imgWrap=e.target.closest(".card-img");if(!imgWrap) return;if(e.target.closest(".nav-btn")) return;var card=imgWrap.closest(".card");if(card) openDetail(card);});/* ======= Renderizador dinâmico do catálogo (dados vêm do Firebase) ======= */
+var WPP_NUMERO = '5532984701509';
+var lastCatalogData = null;
+
+function applyConfig(cfg){
+  cfg = cfg || {};
+  if(cfg.whatsapp) WPP_NUMERO = String(cfg.whatsapp).replace(/\D/g,'') || WPP_NUMERO;
+
+  var taglineEl = document.getElementById('brandTagline');
+  if(taglineEl && cfg.tagline) taglineEl.textContent = cfg.tagline;
+
+  var headerWppEl = document.getElementById('headerWppLink');
+  if(headerWppEl){
+    var saudacao = 'Ola! \uD83D\uDC4B Vi o catalogo da TRAMA Store e tenho interesse em alguns produtos. Pode me ajudar? \uD83D\uDE0A';
+    headerWppEl.setAttribute('href', 'https://wa.me/'+WPP_NUMERO+'?text='+encodeURIComponent(saudacao));
+  }
+
+  var pagamentosEl = document.getElementById('footerPagamentos');
+  if(pagamentosEl && cfg.pagamentos) pagamentosEl.textContent = 'Aceitamos: '+cfg.pagamentos;
+
+  var politicaEl = document.getElementById('footerPolitica');
+  if(politicaEl && cfg.politica) politicaEl.textContent = cfg.politica;
+
+  /* Como o número de WhatsApp usado nos cards pode ter mudado, re-renderiza
+     o catálogo já carregado para atualizar os links dos botões. */
+  if(lastCatalogData !== null) renderCatalog(lastCatalogData);
+}
+
+function escAttr(v){
+  return String(v == null ? '' : v).replace(/"/g,'&quot;');
+}
+
+function normalizeItem(c){
+  /* Garante compatibilidade com itens antigos que ainda não tenham "sizes" */
+  if(!c.sizes){
+    c.sizes = c.size ? [{ size: c.size, qty: c.qty || 0 }] : [];
+  }
+  return c;
+}
+
+function filterOptionsHtml(groupClass, values){
+  return values.map(function(v){
+    var vEsc = escAttr(v);
+    var vVal = escAttr(String(v).toLowerCase());
+    return '<label class="filter-check"><input type="checkbox" class="' + groupClass + '" value="' + vVal + '"> ' + vEsc + '</label>';
+  }).join('');
+}
+
+function filterGroupHtml(title, groupClass, values){
+  if(!values.length) return '';
+  return '<div class="filter-group">'
+    + '<button type="button" class="filter-group-title">'
+    +   '<span>'+title+'</span>'
+    +   '<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'
+    + '</button>'
+    + '<div class="filter-options">'+filterOptionsHtml(groupClass,values)+'</div>'
+    + '</div>';
+}
+
+function buildCardHtml(c, i){
+  var totalQtd=0;
+  for(var j=0;j<c.sizes.length;j++){ totalQtd+=(c.sizes[j].qty||0); }
+  var esgotado = totalQtd===0;
+  var agora = Date.now();
+  var novidade = c.createdAt && (agora-c.createdAt)<604800000;
+
+  var tamHtml='';
+  for(var j=0;j<c.sizes.length;j++){
+    var s=c.sizes[j];
+    if(s.qty>0){ tamHtml += '<button type="button" class="sz ok" data-size="'+s.size+'" onclick="selectSize(this)">'+s.size+'</button>'; }
+  }
+
+  var fotos=[];
+  if(c.photo) fotos.push(c.photo);
+  if(c.photos && c.photos.length>0){ for(var f=0;f<c.photos.length;f++){ fotos.push(c.photos[f]); } }
+
+  var fotoHtml='';
+  if(fotos.length>1){
+    fotoHtml = '<div class="gallery" id="gal-'+i+'">';
+    for(var f=0;f<fotos.length;f++){ fotoHtml += '<img src="'+fotos[f]+'"'+(esgotado?' class="foto-esgotado"':'')+'>'; }
+    fotoHtml += '</div>'
+      + '<button class="nav-btn prev" onclick="slideGal(\'gal-'+i+'\',-1);resetGalAutoplay(\'gal-'+i+'\')">&#10094;</button>'
+      + '<button class="nav-btn next" onclick="slideGal(\'gal-'+i+'\',1);resetGalAutoplay(\'gal-'+i+'\')">&#10095;</button>'
+      + '<div class="dots">';
+    for(var f=0;f<fotos.length;f++){ fotoHtml += '<span class="dot'+(f===0?' active':'')+'"></span>'; }
+    fotoHtml += '</div>';
+  } else if(fotos.length===1){
+    fotoHtml = '<img src="'+fotos[0]+'"'+(esgotado?' class="foto-esgotado"':'')+'>';
+  } else {
+    fotoHtml = '<span style="font-size:56px;color:#ddd">&#128087;</span>';
+  }
+
+  var promoAtiva = !!(c.promo && c.promoOriginal && c.promoOriginal > c.price);
+
+  var badgeHtml='';
+  if(esgotado){ badgeHtml = '<span class="badge esgotado">ESGOTADO</span><div class="risco"></div>'; }
+  else if(promoAtiva){ badgeHtml = '<span class="badge promo">PROMOÇÃO</span>'; }
+  else if(novidade){ badgeHtml = '<span class="badge novidade">NOVIDADE</span>'; }
+
+  var pvHtml = c.price ? 'R$ '+Number(c.price).toFixed(2).replace('.',',') : '';
+  var pcHtml = (c.priceCard && c.priceCard!==c.price) ? 'R$ '+Number(c.priceCard).toFixed(2).replace('.',',') : '';
+  var poHtml = promoAtiva ? 'R$ '+Number(c.promoOriginal).toFixed(2).replace('.',',') : '';
+  var ref = c.ref || ('TR'+String(i+1).padStart(3,'0'));
+  var baseMsg = 'Ola! Quero a peca '+(c.name||'')+' - '+(c.color||'')+' (Ref: '+ref+')';
+  var wppPeca = 'https://wa.me/'+WPP_NUMERO+'?text='+encodeURIComponent(baseMsg);
+  var btnWpp = esgotado
+    ? '<span class="btn-esgotado">Indisponivel</span>'
+    : '<a href="'+wppPeca+'" data-basemsg="'+escAttr(baseMsg)+'" class="btn-peca-wpp" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#fff" style="vertical-align:middle;margin-right:4px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="btn-wpp-label">Quero essa!</span></a>';
+
+  var sizesAttr = c.sizes.map(function(s){ return s.size; }).join(',');
+
+  var precosHtml = promoAtiva
+    ? '<div class="card-prices promo-prices">'
+      + '<div class="promo-de">De <span class="promo-de-value">'+poHtml+'</span></div>'
+      + '<div class="price-main-row"><span class="price-label">Por</span><span class="price-main promo-price">'+pvHtml+'</span></div>'
+      + (pcHtml ? '<div class="price-card-row">ou <span class="price-card">'+pcHtml+'</span> no cartão</div>' : '')
+      + '</div>'
+    : '<div class="card-prices">'
+      + '<div class="price-main-row"><span class="price-label">À vista</span><span class="price-main">'+pvHtml+'</span></div>'
+      + (pcHtml ? '<div class="price-card-row">ou <span class="price-card">'+pcHtml+'</span> no cartão</div>' : '')
+      + '</div>';
+
+  return '<div class="card'+(esgotado?' card-esgotado':'')+'"'
+    + ' data-nome="'+escAttr((c.name||'').toLowerCase())+'"'
+    + ' data-cor="'+escAttr((c.color||'').toLowerCase())+'"'
+    + ' data-ref="'+escAttr(ref.toLowerCase())+'"'
+    + ' data-categoria="'+escAttr((c.category||'').toLowerCase())+'"'
+    + ' data-genero="'+escAttr((c.gender||'').toLowerCase())+'"'
+    + ' data-subcategoria="'+escAttr((c.subcategory||'').toLowerCase())+'"'
+    + ' data-jeans="'+(c.jeans?'1':'0')+'"'
+    + ' data-sizes="'+escAttr(sizesAttr)+'"'
+    + ' data-disp="'+(esgotado?'0':'1')+'"'
+    + ' data-promo="'+(promoAtiva?'1':'0')+'"'
+    + ' data-price="'+(c.price||0)+'">'
+    + '<div class="card-img">'+badgeHtml+fotoHtml+'</div>'
+    + '<div class="card-info">'
+    + '<div class="card-name">'+(c.name||'')+'</div>'
+    + '<div class="card-color">'+(c.color||'')+' | Ref: '+ref+'</div>'
+    + (tamHtml ? '<div class="size-hint">Selecione o tamanho <span class="size-hint-opt">(opcional)</span></div>' : '')
+    + '<div class="card-sizes">'+tamHtml+'</div>'
+    + precosHtml
+    + btnWpp
+    + '</div></div>';
+}
+
+function renderCatalog(rawCatalog){
+  var catalog = (rawCatalog || []).map(normalizeItem);
+
+  /* Ordena: peças com estoque primeiro */
+  catalog.sort(function(a,b){
+    var qa=0,qb=0;
+    for(var i=0;i<a.sizes.length;i++){ qa+=(a.sizes[i].qty||0); }
+    for(var i=0;i<b.sizes.length;i++){ qb+=(b.sizes[i].qty||0); }
+    if(qa===0&&qb>0) return 1;
+    if(qb===0&&qa>0) return -1;
+    return 0;
+  });
+
+  /* Remove peças totalmente sem estoque: não aparecem no catálogo público */
+  catalog = catalog.filter(function(c){
+    var t=0;
+    for(var j=0;j<c.sizes.length;j++){ t+=(c.sizes[j].qty||0); }
+    return t>0;
+  });
+
+  var categoriasSet={}, generosSet={}, tamanhosSet={}, coresSet={}, subcategoriasSet={};
+  var temPromo=false, temJeans=false;
+  for(var i=0;i<catalog.length;i++){
+    var c=catalog[i];
+    if(c.category) categoriasSet[c.category]=true;
+    if(c.gender) generosSet[c.gender]=true;
+    if(c.color) coresSet[c.color]=true;
+    if(c.subcategory) subcategoriasSet[c.subcategory]=true;
+    for(var j=0;j<c.sizes.length;j++){ tamanhosSet[c.sizes[j].size]=true; }
+    if(c.promo && c.promoOriginal && c.promoOriginal > c.price) temPromo=true;
+    if(c.jeans) temJeans=true;
+  }
+  var categoriasArr=Object.keys(categoriasSet).sort();
+  var generosArr=Object.keys(generosSet).sort();
+  var coresArr=Object.keys(coresSet).sort();
+  var SUBCATEGORY_ORDER=['Vestidos','Blusas','Shorts e bermudas','Calças','Bermudas','Camisas','Camisetas','Conjuntos','Saias','Casacos'];
+  var subcategoriasArr=Object.keys(subcategoriasSet).sort(function(a,b){
+    var ia=SUBCATEGORY_ORDER.indexOf(a), ib=SUBCATEGORY_ORDER.indexOf(b);
+    if(ia===-1 && ib===-1) return a.localeCompare(b);
+    if(ia===-1) return 1;
+    if(ib===-1) return -1;
+    return ia-ib;
+  });
+  var SIZE_ORDER=['PP','P','M','G','GG','XG','XGG','U','34','35','36','37','38','39','40','41','42','43','44'];
+  var tamanhosArr=Object.keys(tamanhosSet).sort(function(a,b){
+    var ia=SIZE_ORDER.indexOf(a.toUpperCase()), ib=SIZE_ORDER.indexOf(b.toUpperCase());
+    if(ia===-1 && ib===-1) return a.localeCompare(b);
+    if(ia===-1) return 1;
+    if(ib===-1) return -1;
+    return ia-ib;
+  });
+
+  var cardsHtml='';
+  for(var i=0;i<catalog.length;i++){ cardsHtml += buildCardHtml(catalog[i], i); }
+
+  var sidebarPromo = temPromo
+    ? '<div class="filter-group"><div class="filter-options" style="display:flex;margin-top:0"><label class="filter-check promo-filter-check"><input type="checkbox" id="fPromo"> PROMOÇÃO</label></div></div>'
+    : '';
+  var sidebarJeans = temJeans
+    ? '<div class="filter-group"><div class="filter-options" style="display:flex;margin-top:0"><label class="filter-check"><input type="checkbox" id="fJeans"> Somente jeans</label></div></div>'
+    : '';
+  var sidebarHtml = sidebarPromo
+    + sidebarJeans
+    + filterGroupHtml('Categoria', 'f-categoria', categoriasArr)
+    + filterGroupHtml('Subcategoria', 'f-subcategoria', subcategoriasArr)
+    + filterGroupHtml('Genero', 'f-genero', generosArr)
+    + filterGroupHtml('Tamanho', 'f-tamanho', tamanhosArr)
+    + filterGroupHtml('Cor', 'f-cor', coresArr);
+
+  document.getElementById('grid').innerHTML = cardsHtml;
+  document.getElementById('filterGroupsContainer').innerHTML = sidebarHtml;
+
+  /* Re-anexa comportamentos que dependem do conteúdo recém-gerado */
+  document.querySelectorAll('.filter-group-title').forEach(function(btn){
+    btn.addEventListener('click', function(){ btn.closest('.filter-group').classList.toggle('open'); });
+  });
+  document.querySelectorAll('.f-categoria,.f-subcategoria,.f-genero,.f-tamanho,.f-cor').forEach(function(el){
+    el.addEventListener('change', filtrarPecas);
+  });
+  if(document.getElementById('fPromo')){
+    document.getElementById('fPromo').addEventListener('change', filtrarPecas);
+  }
+  if(document.getElementById('fJeans')){
+    document.getElementById('fJeans').addEventListener('change', filtrarPecas);
+  }
+  document.querySelectorAll('.gallery').forEach(function(gal){ startGalAutoplay(gal.id); });
+
+  filtrarPecas();
+  ordenarPecas();
+}
+</script><script>var CATALOG_CACHE_KEY="trama_public_catalog_cache_v1";try{var cachedRaw=localStorage.getItem(CATALOG_CACHE_KEY);if(cachedRaw){var cachedData=JSON.parse(cachedRaw);if(Array.isArray(cachedData) && cachedData.length){lastCatalogData=cachedData;document.getElementById("errorState").style.display="none";renderCatalog(cachedData);}}}catch(e){ /* sem cache disponivel, segue o carregamento normal */ }document.addEventListener("DOMContentLoaded", function(){var firebaseConfig={"apiKey":"AIzaSyBj9JskW4G50_ziM1NLh3EX0EnoEluJx3A","authDomain":"familia-volei.firebaseapp.com","databaseURL":"https://familia-volei-default-rtdb.firebaseio.com","projectId":"familia-volei","storageBucket":"familia-volei.firebasestorage.app","messagingSenderId":"250165693676","appId":"1:250165693676:web:3ada372301612d336329c9"};firebase.initializeApp(firebaseConfig);var catalogRef=firebase.database().ref("catalogo");var configRef=firebase.database().ref("config");catalogRef.on("value",function(snapshot){var data=snapshot.val();var lista=[];if(Array.isArray(data)){ lista=data.filter(function(x){return x;}); }else if(data && typeof data==="object"){ lista=Object.keys(data).map(function(k){return data[k];}); }lastCatalogData=lista;try{ localStorage.setItem(CATALOG_CACHE_KEY, JSON.stringify(lista)); }catch(e){ /* espaco local cheio: sem problema, so nao guarda cache desta vez */ }document.getElementById("errorState").style.display="none";renderCatalog(lista);},function(err){document.getElementById("grid").innerHTML="";document.getElementById("errorState").style.display="block";console.error("Erro ao carregar catalogo do Firebase:",err);});configRef.on("value",function(snapshot){ applyConfig(snapshot.val()); });});</script></body></html>
