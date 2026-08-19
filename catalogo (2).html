@@ -1,0 +1,596 @@
+<!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Trama Store - Catálogo</title><link rel="preconnect" href="https://www.gstatic.com" crossorigin><link rel="preconnect" href="https://familia-volei-default-rtdb.firebaseio.com"><link rel="dns-prefetch" href="https://www.gstatic.com"><link rel="dns-prefetch" href="https://familia-volei-default-rtdb.firebaseio.com"><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui,-apple-system,sans-serif;background:#f8f6f4;color:#1a1a1a;line-height:1.5}.header{background:#141414;color:#fff;padding:14px 16px;text-align:left}.header-row{display:flex;align-items:center;justify-content:space-between;gap:10px}.brand{display:flex;align-items:center;gap:10px;min-width:0}.brand img{width:40px;height:40px;border-radius:50%;flex-shrink:0;display:block}.brand-text{display:flex;flex-direction:column;min-width:0;justify-content:center}.brand-name{font-family:Georgia,'Palatino Linotype',Palatino,serif;font-size:15px;font-weight:700;letter-spacing:1.5px;color:#fff;line-height:1.2}.brand-name .store{font-family:Georgia,'Palatino Linotype',Palatino,serif;font-weight:400;font-style:italic;letter-spacing:0;color:#c9a96e}.brand-tagline{font-size:11px;color:#c9a96e;font-family:Palatino,Georgia,serif;font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.header-actions{display:flex;align-items:center;gap:8px;flex-shrink:0}.icon-circle-btn{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;border:none;cursor:pointer}.icon-circle-btn:hover{filter:brightness(1.08)}.icon-circle-btn.wpp{background:#25d366;animation:wppPulse 2s infinite}@keyframes wppPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{box-shadow:0 0 0 10px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}.icon-circle-btn.insta{background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)}.pdf-btn-label{display:flex;align-items:center;gap:4px;height:36px;padding:0 10px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:11px;font-weight:700;letter-spacing:.3px;cursor:pointer;flex-shrink:0}.pdf-btn-label:hover{background:rgba(255,255,255,.22)}.shop-wrap{display:flex;max-width:1300px;margin:0 auto;align-items:flex-start}.filters-toggle{display:none;align-items:center;justify-content:center;gap:7px;position:sticky;top:0;z-index:5;height:40px;padding:0 14px;background:#fff;color:#1C1916;border:1.5px solid #e8e1d3;border-radius:10px;font-family:inherit;font-size:12.5px;line-height:1.3;font-weight:700;letter-spacing:.2px;cursor:pointer;box-shadow:0 1px 3px rgba(28,25,22,.05)}.filters-toggle:hover{border-color:#c9a96e;box-shadow:0 2px 8px rgba(201,169,110,.18)}.filters-toggle svg{flex-shrink:0;color:#c9a96e}.sidebar{width:250px;flex-shrink:0;background:#fff;border-right:1px solid #eee;padding:18px 16px;position:sticky;top:0;max-height:100vh;overflow-y:auto}.sidebar-header{display:none;justify-content:space-between;align-items:center;margin-bottom:12px}.sidebar-close{background:none;border:none;font-size:22px;cursor:pointer;color:#333}.search-bar-side{margin-bottom:16px}.search-bar-side .search-input{width:100%;padding:10px 14px;border-radius:20px;border:1px solid #e0e0e0;font-size:13px;outline:none}.search-bar-side .search-input:focus{border-color:#c9a96e}.filter-group{margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid #f0f0f0}.filter-group-title{display:flex;align-items:center;justify-content:space-between;width:100%;background:none;border:none;padding:0;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:#1C1916;cursor:pointer;font-family:inherit}.filter-group-title .chev{transition:transform .2s ease;color:#c9a96e;flex-shrink:0}.filter-group.open .filter-group-title .chev{transform:rotate(180deg)}.filter-options{display:none;flex-direction:column;gap:6px;max-height:180px;overflow-y:auto;margin-top:10px}.filter-group.open .filter-options{display:flex}.filter-check{display:flex;align-items:center;gap:7px;font-size:13px;color:#444;cursor:pointer}.promo-filter-check{color:#e11d2e;font-weight:700;letter-spacing:.3px}.promo-filter-check input{accent-color:#e11d2e}.filter-check input{cursor:pointer}.filter-actions{display:flex;flex-direction:column;gap:8px;margin-top:6px}.apply-filters-btn{width:100%;padding:10px;background:#1C1916;color:#fff;border:1px solid #1C1916;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer}.apply-filters-btn:hover{background:#332e28}.clear-filters-btn{width:100%;padding:9px;background:#f0eee9;color:#1C1916;border:1px solid #ddd;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer}.sidebar-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.4);z-index:8}.sidebar-overlay.open{display:block}.shop-main{flex:1;min-width:0}.toolbar{display:flex;align-items:center;justify-content:flex-end;gap:10px;padding:14px 20px 16px;border-bottom:1px solid #eee}.sort-wrap{position:relative;display:flex;align-items:center}.sort-wrap .sort-icon{position:absolute;left:12px;color:#c9a96e;pointer-events:none}.sort-select{height:40px;padding:0 14px 0 34px;border-radius:10px;border:1.5px solid #e8e1d3;font-family:inherit;font-size:12.5px;line-height:1.3;color:#1C1916;background:#fff;outline:none;cursor:pointer;font-weight:700;letter-spacing:.2px;appearance:none;-webkit-appearance:none;-moz-appearance:none;box-shadow:0 1px 3px rgba(28,25,22,.05)}.sort-select:hover{border-color:#c9a96e}.sort-select:focus{border-color:#c9a96e;box-shadow:0 2px 8px rgba(201,169,110,.18)}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;padding:20px}.card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid #eee;transition:all .2s}.card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08)}.card-esgotado{opacity:.75}.card-img{width:100%;height:260px;background:#f0f0f0;position:relative;overflow:hidden;cursor:pointer}.detail-view{display:none;position:fixed;inset:0;background:#000;z-index:50;flex-direction:column}.detail-view.active{display:flex}.detail-back{position:absolute;top:14px;left:14px;z-index:3;display:flex;align-items:center;gap:6px;padding:9px 16px;background:rgba(255,255,255,.94);color:#1C1916;border:none;border-radius:20px;font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.25)}.detail-back:hover{background:#fff}.detail-img-wrap{flex:1;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:0}.detail-img-wrap img{max-width:100%;max-height:100%;object-fit:contain;display:block}.detail-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.85);color:#1C1916;border:none;width:38px;height:38px;border-radius:50%;font-size:17px;cursor:pointer;z-index:2}.detail-nav.prev{left:14px}.detail-nav.next{right:14px}.detail-dots{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:2}.detail-dots .dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.4)}.detail-dots .dot.active{background:#fff}.detail-caption{padding:14px 20px;background:#fff;text-align:center;flex-shrink:0}.detail-caption .name{font-size:15px;font-weight:700;color:#1C1916}.detail-caption .info{font-size:12.5px;color:#888;margin-top:2px}.card-img>img{width:100%;height:260px;object-fit:cover;display:block}.card-img .gallery{display:flex;transition:transform .3s ease;height:260px;width:100%}.card-img .gallery img{min-width:100%;width:100%;height:260px;object-fit:cover;flex-shrink:0}.card-img .nav-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.4);color:#fff;border:none;width:28px;height:28px;cursor:pointer;font-size:14px;border-radius:50%;z-index:2}.card-img .nav-btn.prev{left:6px}.card-img .nav-btn.next{right:6px}.card-img .dots{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);display:flex;gap:4px;z-index:2}.card-img .dot{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.5)}.card-img .dot.active{background:#fff}.foto-esgotado{filter:grayscale(100%)}.risco{position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,transparent 45%,rgba(220,38,38,.4) 45%,rgba(220,38,38,.4) 55%,transparent 55%)}.badge{position:absolute;top:10px;left:10px;color:#fff;font-size:9px;font-weight:700;letter-spacing:.3px;padding:3px 8px;border-radius:4px;z-index:2}.badge.promo{background:#e11d2e}.badge.esgotado{background:#dc2626}.badge.novidade{background:#c9a96e}.card-info{padding:14px 16px 16px}.card-name{font-size:15px;font-weight:600;margin-bottom:2px}.card-color{font-size:12px;color:#888;margin-bottom:10px}.color-swatch-btn{width:26px;height:26px;border-radius:50%;border:2px solid #e8e8e8;cursor:pointer;padding:0;flex-shrink:0;position:relative;transition:all .15s ease}.color-swatch-btn:hover{border-color:#c9a96e}.color-swatch-btn.active{border-color:#1C1916;box-shadow:0 0 0 2px #fff,0 0 0 3px #1C1916}.color-swatch-btn.out{opacity:.4}.color-swatch-btn.out::after{content:"";position:absolute;inset:-2px;border-radius:50%;background:linear-gradient(135deg,transparent 46%,rgba(220,38,38,.75) 46%,rgba(220,38,38,.75) 54%,transparent 54%)}.detail-color-swatches{display:none;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}.detail-color-swatches .color-swatch-btn{width:30px;height:30px}.card-corner-actions{position:absolute;top:10px;right:10px;display:flex;flex-direction:column;gap:6px;z-index:2}.card-fav-btn,.card-share-btn{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.92);border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;color:#1C1916;box-shadow:0 1px 4px rgba(0,0,0,.18);transition:transform .12s ease}.card-fav-btn:hover,.card-share-btn:hover{transform:scale(1.08)}.card-fav-btn.active{color:#c1272d}.card-highlight{animation:cardHighlightPulse 1.5s ease}@keyframes cardHighlightPulse{0%{box-shadow:0 0 0 0 rgba(201,169,110,.6)}70%{box-shadow:0 0 0 14px rgba(201,169,110,0)}100%{box-shadow:0 0 0 0 rgba(201,169,110,0)}}.fav-fab{position:fixed;right:18px;bottom:18px;width:54px;height:54px;border-radius:50%;background:#1C1916;color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 4px 16px rgba(0,0,0,.28);z-index:20}.fav-fab:hover{background:#332e28}.fav-fab-badge{position:absolute;top:-4px;right:-4px;min-width:20px;height:20px;padding:0 5px;border-radius:10px;background:#c1272d;color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center}.fav-panel-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:30;align-items:flex-end;justify-content:center}.fav-panel-overlay.visible{display:flex}.fav-panel{background:#fff;width:100%;max-width:480px;max-height:78vh;border-radius:16px 16px 0 0;display:flex;flex-direction:column;overflow:hidden}.fav-panel-header{display:flex;align-items:center;justify-content:space-between;padding:16px 18px;border-bottom:1px solid #eee;font-weight:700;font-size:15px}.fav-panel-close{background:none;border:none;font-size:24px;cursor:pointer;color:#333;line-height:1}.fav-panel-list{flex:1;overflow-y:auto;padding:8px 14px}.fav-panel-empty{padding:30px 10px;text-align:center;color:#888;font-size:13px}.fav-panel-item{display:flex;align-items:center;gap:10px;padding:10px 4px;border-bottom:1px solid #f2f2f2}.fav-panel-item img{width:48px;height:48px;border-radius:8px;object-fit:cover;flex-shrink:0}.fav-panel-item-noimg{width:48px;height:48px;border-radius:8px;background:#f2f2f2;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}.fav-panel-item-info{flex:1;min-width:0}.fav-panel-item-name{font-size:13px;font-weight:600;color:#1C1916;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.fav-panel-item-meta{font-size:12px;color:#888;margin-top:2px}.fav-panel-item-remove{background:none;border:none;font-size:20px;color:#bbb;cursor:pointer;line-height:1;padding:4px}.fav-panel-item-remove:hover{color:#c1272d}.fav-panel-footer{display:flex;gap:10px;padding:14px 18px;border-top:1px solid #eee}.fav-panel-clear{flex:0 0 auto;padding:0 14px;background:#f0eee9;color:#1C1916;border:1px solid #ddd;border-radius:8px;font-size:12.5px;font-weight:600;cursor:pointer}.fav-panel-send{flex:1;text-align:center;padding:12px 14px;background:#25d366;color:#fff;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none;display:flex;align-items:center;justify-content:center}.featured-section{padding:18px 20px 4px}.featured-section-title{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#1C1916;margin-bottom:12px}.featured-scroll{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;-webkit-overflow-scrolling:touch}.featured-mini-card{flex:0 0 auto;width:120px;cursor:pointer}.featured-mini-card img{width:120px;height:120px;border-radius:10px;object-fit:cover;display:block;border:1px solid #eee}.featured-mini-noimg{width:120px;height:120px;border-radius:10px;background:#f2f2f2;display:flex;align-items:center;justify-content:center;font-size:32px}.featured-mini-name{font-size:11.5px;color:#1C1916;margin-top:6px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:600}.featured-mini-price{font-size:11.5px;color:#9C7A46;font-weight:700;margin-top:2px}.share-toast{position:fixed;left:50%;bottom:86px;transform:translateX(-50%) translateY(10px);background:#1C1916;color:#fff;padding:10px 18px;border-radius:20px;font-size:12.5px;opacity:0;pointer-events:none;transition:opacity .2s ease,transform .2s ease;z-index:40}.share-toast.visible{opacity:1;transform:translateX(-50%) translateY(0)}.card-sizes{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}.size-hint{font-size:10.5px;color:#999;margin-bottom:6px}.size-hint-opt{color:#bbb}.sz{padding:5px 10px;border-radius:6px;font-size:12px;font-weight:600;border:1.5px solid #e8e8e8;background:#fff;color:#444;cursor:pointer;font-family:inherit;transition:all .15s ease}.sz.ok{background:#ecfdf5;color:#15803d;border-color:#bbf7d0}.sz.ok:hover{border-color:#15803d}.sz.ok.selected{background:#1C1916;color:#fff;border-color:#1C1916}.sz.no{background:#fef2f2;color:#aaa;border-color:#fecaca;text-decoration:line-through}.card-prices{margin-bottom:10px}.promo-de{font-size:12px;color:#999;margin-bottom:2px}.promo-de-value{text-decoration:line-through}.promo-price{color:#e11d2e}.price-main-row{display:flex;align-items:baseline;gap:7px;margin-bottom:3px}.price-label{font-size:11px;color:#888}.price-main{font-size:20px;font-weight:800;letter-spacing:-.2px;font-variant-numeric:tabular-nums}.price-card-row{font-size:11px;color:#999}.price-card{font-size:11px;font-weight:700;letter-spacing:.1px;font-variant-numeric:tabular-nums;color:#999}.btn-peca-wpp{display:inline-flex;align-items:center;padding:8px 14px;background:#25d366;color:#fff;border-radius:6px;text-decoration:none;font-size:12px;font-weight:600}.btn-peca-wpp:hover{background:#1da851}.btn-esgotado{display:inline-block;padding:8px 14px;background:#eee;color:#999;border-radius:6px;font-size:12px;font-weight:600}.empty{text-align:center;padding:60px 20px;color:#888;display:none}.footer{background:#1C1916;color:#aaa;padding:20px 20px;text-align:center;font-size:12px;margin-top:20px}.footer .f-brand{font-family:Georgia,'Palatino Linotype',Palatino,serif;font-size:16px;font-weight:700;color:#fff;letter-spacing:1.5px;margin-bottom:6px}.footer .f-brand .store{font-weight:400;font-style:italic;letter-spacing:0;color:#c9a96e}.footer .pagamentos{margin:8px 0;color:#ddd}.footer .politica{margin-top:8px;font-size:11px;color:#777;max-width:460px;margin-left:auto;margin-right:auto}@media(max-width:800px){.filters-toggle{display:flex;flex:1;min-width:0}.toolbar{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;padding:12px;gap:10px}.sort-wrap{flex:1;min-width:0}.sort-select{width:100%}.sidebar{position:fixed;top:0;left:0;height:100vh;max-height:100vh;width:82%;max-width:300px;z-index:9;transform:translateX(-100%);transition:transform .25s ease;box-shadow:2px 0 12px rgba(0,0,0,.15)}.sidebar.open{transform:translateX(0)}.sidebar-header{display:flex}.grid{grid-template-columns:repeat(2,1fr);gap:10px;padding:12px}.card-info{padding:10px 12px}.card-name{font-size:13px}.price-main{font-size:16px}.header{padding:12px 14px}.brand-name{font-size:14px}.brand-tagline{font-size:10px}}@media print{.filters-toggle,.toolbar,.sidebar,.sidebar-overlay,.btn-peca-wpp,.header-actions,.footer{display:none !important}.shop-wrap{display:block}.header{padding:20px;background:#1C1916 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}.grid{grid-template-columns:repeat(3,1fr) !important}.card{break-inside:avoid}.card:hover{transform:none;box-shadow:none}#loadingState{text-align:center;padding:80px 20px;color:#999;font-size:14px;grid-column:1/-1}#loadingState .spin{width:34px;height:34px;border:3px solid #eee;border-top-color:#c9a96e;border-radius:50%;margin:0 auto 14px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}#errorState{display:none;text-align:center;padding:80px 20px;color:#c0392b;font-size:14px;grid-column:1/-1}}</style></head><body><header class="header"><div class="header-row"><div class="brand"><img src="https://desenvhub.github.io/trama-store/logo.png" width="40" height="40" style="border-radius:50%"><div class="brand-text"><span class="brand-name">TRAMA <span class="store">Store</span></span><span class="brand-tagline" id="brandTagline">Vista sua essência</span></div></div><div class="header-actions"><a href="https://wa.me/5532984701509?text=Ol%C3%A1!%20%F0%9F%91%8B%20Vi%20o%20cat%C3%A1logo%20da%20TRAMA%20Store%20e%20tenho%20interesse%20em%20alguns%20produtos.%20Pode%20me%20ajudar%3F%20%F0%9F%98%8A" class="icon-circle-btn wpp" id="headerWppLink" target="_blank" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a><a href="https://instagram.com/tramastore_" class="icon-circle-btn insta" target="_blank" title="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="#fff"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a><button onclick="window.print()" class="pdf-btn-label" title="Salvar PDF"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg><span>PDF</span></button></div></div></header><div class="shop-wrap"><aside class="sidebar" id="sidebarFilters"><div class="sidebar-header"><span>Filtros</span><button class="sidebar-close" id="sidebarClose">&times;</button></div><div class="search-bar-side"><input type="text" class="search-input" id="busca" placeholder="Buscar por nome, cor ou ref..."></div><div id="filterGroupsContainer"></div><div class="filter-actions"><button class="apply-filters-btn" id="applyFiltersBtn">Aplicar filtros</button><button class="clear-filters-btn" id="clearFiltersBtn">Limpar filtros</button></div></aside><div class="sidebar-overlay" id="sidebarOverlay"></div><div class="shop-main"><div class="toolbar"><button class="filters-toggle" id="filtersToggle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="6" x2="20" y2="6"/><line x1="7" y1="12" x2="17" y2="12"/><line x1="10" y1="18" x2="14" y2="18"/></svg><span>Filtros</span></button><div class="sort-wrap"><svg class="sort-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 16-4 4-4-4"/><path d="M17 20V4"/><path d="m3 8 4-4 4 4"/><path d="M7 4v16"/></svg><select class="sort-select" id="ordenar"><option value="">Ordenar</option><option value="menor">Menor preco</option><option value="maior">Maior preco</option><option value="az">De A a Z</option></select></div></div><div id="featuredSections"></div><section class="grid" id="grid"><div id="loadingState"><div class="spin"></div>Carregando catalogo...</div></section><div id="errorState">Nao foi possivel carregar o catalogo agora. Tente novamente em instantes.</div><div class="empty" id="vazio"><p style="font-size:48px">&#128230;</p><p>Nenhuma peca encontrada</p></div></div></div><footer class="footer"><p class="f-brand">TRAMA <span class="store">Store</span></p><div class="pagamentos" id="footerPagamentos">Aceitamos: Pix | Cartao de credito/debito | Dinheiro</div><p class="politica" id="footerPolitica">Trocas em até 7 dias após o recebimento, mediante apresentação da peça em perfeito estado, sem indícios de uso e com as etiquetas originais.</p></footer><div class="detail-view" id="detailView"><button class="detail-back" id="detailBack"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg><span>Voltar</span></button><div class="detail-img-wrap" id="detailImgWrap"></div><div class="detail-caption"><div class="detail-color-swatches" id="detailColorSwatches" style="display:none"></div><div class="name" id="detailName"></div><div class="info" id="detailInfo"></div></div></div><button class="fav-fab" id="favFab" title="Meus favoritos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-6.7-4.35-9.3-8.2C1 10.1 1.6 6.6 4.6 5.1c2.4-1.2 5 0 7.4 3 2.4-3 5-4.2 7.4-3 3 1.5 3.6 5 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg><span class="fav-fab-badge" id="favFabBadge" style="display:none;">0</span></button><div class="fav-panel-overlay" id="favPanelOverlay"><div class="fav-panel"><div class="fav-panel-header"><span>Meus favoritos</span><button class="fav-panel-close" id="favPanelClose">&times;</button></div><div class="fav-panel-list" id="favPanelList"></div><div class="fav-panel-footer"><button type="button" class="fav-panel-clear" id="favPanelClear">Limpar lista</button><a class="fav-panel-send" id="favPanelSend" href="#" target="_blank">Enviar lista pro WhatsApp</a></div></div></div><div class="share-toast" id="shareToast"></div><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js" defer></script><script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js" defer></script><script>function getChecked(cls){return Array.prototype.map.call(document.querySelectorAll("."+cls+":checked"),function(el){return el.value;});}function filtrarPecas(){var busca=(document.getElementById("busca").value||"").trim().toLowerCase();var categorias=getChecked("f-categoria");var subcategorias=getChecked("f-subcategoria");var generos=getChecked("f-genero");var tamanhos=getChecked("f-tamanho");var cores=getChecked("f-cor");var fPromoEl=document.getElementById("fPromo");var apenasPromo=fPromoEl?fPromoEl.checked:false;var fJeansEl=document.getElementById("fJeans");var apenasJeans=fJeansEl?fJeansEl.checked:false;var cards=document.querySelectorAll(".card");var visiveis=0;cards.forEach(function(card){var nome=card.getAttribute("data-nome");var cor=card.getAttribute("data-cor");var ref=card.getAttribute("data-ref");var categoria=card.getAttribute("data-categoria");var subcategoria=card.getAttribute("data-subcategoria");var genero=card.getAttribute("data-genero");var jeans=card.getAttribute("data-jeans")==="1";var sizes=","+card.getAttribute("data-sizes").toLowerCase()+",";var promo=card.getAttribute("data-promo")==="1";var matchBusca=!busca||nome.indexOf(busca)>=0||cor.indexOf(busca)>=0||ref.indexOf(busca)>=0;var matchCategoria=categorias.length===0||categorias.indexOf(categoria)>=0;var matchSubcategoria=subcategorias.length===0||subcategorias.indexOf(subcategoria)>=0;var matchGenero=generos.length===0||generos.indexOf(genero)>=0;var matchCor=cores.length===0||cores.indexOf(cor)>=0;var matchTamanho=tamanhos.length===0||tamanhos.some(function(t){return sizes.indexOf(","+t+",")>=0;});var matchPromo=!apenasPromo||promo;var matchJeans=!apenasJeans||jeans;if(matchBusca&&matchCategoria&&matchSubcategoria&&matchGenero&&matchCor&&matchTamanho&&matchPromo&&matchJeans){card.style.display="";visiveis++;}else{card.style.display="none";}});document.getElementById("vazio").style.display=visiveis===0?"block":"none";}function ordenarPecas(){var modo=document.getElementById("ordenar").value;var grid=document.getElementById("grid");var cards=Array.prototype.slice.call(grid.querySelectorAll(".card"));if(modo==="menor"){cards.sort(function(a,b){return parseFloat(a.getAttribute("data-price"))-parseFloat(b.getAttribute("data-price"));});}else if(modo==="maior"){cards.sort(function(a,b){return parseFloat(b.getAttribute("data-price"))-parseFloat(a.getAttribute("data-price"));});}else if(modo==="az"){cards.sort(function(a,b){return a.getAttribute("data-nome").localeCompare(b.getAttribute("data-nome"),"pt-BR");});}else{return;}cards.forEach(function(card){grid.appendChild(card);});}document.querySelectorAll(".filter-group-title").forEach(function(btn){btn.addEventListener("click",function(){btn.closest(".filter-group").classList.toggle("open");});});document.getElementById("busca").addEventListener("input",filtrarPecas);document.querySelectorAll(".f-categoria,.f-genero,.f-tamanho,.f-cor").forEach(function(el){el.addEventListener("change",filtrarPecas);});if(document.getElementById("fPromo")){document.getElementById("fPromo").addEventListener("change",filtrarPecas);}document.getElementById("ordenar").addEventListener("change",ordenarPecas);document.getElementById("applyFiltersBtn").addEventListener("click",function(){filtrarPecas();ordenarPecas();document.getElementById("sidebarFilters").classList.remove("open");document.getElementById("sidebarOverlay").classList.remove("open");});document.getElementById("clearFiltersBtn").addEventListener("click",function(){document.getElementById("busca").value="";document.querySelectorAll(".filter-options input[type=checkbox]").forEach(function(el){el.checked=false;});document.getElementById("ordenar").value="";filtrarPecas();ordenarPecas();});document.getElementById("filtersToggle").addEventListener("click",function(){document.getElementById("sidebarFilters").classList.add("open");document.getElementById("sidebarOverlay").classList.add("open");});document.getElementById("sidebarClose").addEventListener("click",function(){document.getElementById("sidebarFilters").classList.remove("open");document.getElementById("sidebarOverlay").classList.remove("open");});document.getElementById("sidebarOverlay").addEventListener("click",function(){document.getElementById("sidebarFilters").classList.remove("open");document.getElementById("sidebarOverlay").classList.remove("open");});var galTimers={};function startGalAutoplay(id){var gal=document.getElementById(id);if(!gal) return;var imgs=gal.querySelectorAll("img");if(imgs.length<2) return;galTimers[id]=setInterval(function(){slideGal(id,1);},4000);}function resetGalAutoplay(id){if(galTimers[id]){clearInterval(galTimers[id]);}startGalAutoplay(id);}function selectSize(btn){var card=btn.closest(".card");if(!card) return;var wasSelected=btn.classList.contains("selected");card.querySelectorAll(".sz.ok").forEach(function(b){b.classList.remove("selected");});var size=null;if(!wasSelected){btn.classList.add("selected");size=btn.getAttribute("data-size");}var link=card.querySelector(".btn-peca-wpp");if(!link) return;var base=link.getAttribute("data-basemsg")||"";var msg=size?(base+" - Tamanho: "+size):base;link.setAttribute("href","https://wa.me/5532984701509?text="+encodeURIComponent(msg));}function slideGal(id,dir){var gal=document.getElementById(id);var imgs=gal.querySelectorAll("img");var w=gal.parentElement.offsetWidth;var curr=Math.round(Math.abs(parseInt(gal.style.transform.replace("translateX(","").replace("px)",""))||0)/w);var next=curr+dir;if(next<0)next=imgs.length-1;if(next>=imgs.length)next=0;gal.style.transform="translateX(-"+(next*w)+"px)";var dots=gal.parentElement.querySelectorAll(".dot");dots.forEach(function(d,i){d.classList.toggle("active",i===next);});}var detailState={photos:[],index:0};function openDetail(card){var imgs=card.querySelectorAll(".card-img img");var photos=Array.prototype.map.call(imgs,function(img){return img.src;});if(photos.length===0) return;detailState={photos:photos,index:0};var nameEl=card.querySelector(".card-name");var infoEl=card.querySelector(".card-color");document.getElementById("detailName").textContent=nameEl?nameEl.textContent:"";document.getElementById("detailInfo").textContent=infoEl?infoEl.textContent:"";renderDetailImg();if(typeof renderDetailColorSwatches==="function") renderDetailColorSwatches(card);document.getElementById("detailView").classList.add("active");document.body.style.overflow="hidden";}function renderDetailImg(){var wrap=document.getElementById("detailImgWrap");var photos=detailState.photos, idx=detailState.index;var h='<img src="'+photos[idx]+'">';if(photos.length>1){h+='<button class="detail-nav prev" onclick="event.stopPropagation();detailNav(-1)">&#10094;</button>'+'<button class="detail-nav next" onclick="event.stopPropagation();detailNav(1)">&#10095;</button>'+'<div class="detail-dots">';for(var i=0;i<photos.length;i++){ h+='<span class="dot'+(i===idx?" active":"")+'"></span>'; }h+="</div>";}wrap.innerHTML=h;}function detailNav(dir){var n=detailState.photos.length;detailState.index=(detailState.index+dir+n)%n;renderDetailImg();}function closeDetail(){document.getElementById("detailView").classList.remove("active");document.body.style.overflow="";}document.getElementById("detailBack").addEventListener("click",closeDetail);document.addEventListener("keydown",function(e){ if(e.key==="Escape") closeDetail(); });document.getElementById("grid").addEventListener("click",function(e){var imgWrap=e.target.closest(".card-img");if(!imgWrap) return;if(e.target.closest(".nav-btn")) return;var card=imgWrap.closest(".card");if(card) openDetail(card);});/* ======= Renderizador dinâmico do catálogo (dados vêm do Firebase) ======= */
+var WPP_NUMERO = '5532984701509';
+var lastCatalogData = null;
+var CATALOG_ITEMS_BY_ID = {};
+var CATALOG_GROUPS_BY_ID = {};
+
+var COLOR_NAME_HEX = {"preto": "#1a1a1a", "branco": "#ffffff", "off white": "#f5f0e6", "offwhite": "#f5f0e6", "cru": "#e8dcc4", "marfim": "#f2ead8", "nude": "#e3c9a8", "bege": "#d8c3a0", "bege claro": "#e6d7bd", "bege escuro": "#b89b6f", "areia": "#d9c69e", "camel": "#c19a6b", "caramelo": "#b5651d", "cinza": "#9a9a9a", "cinza claro": "#c7c7c7", "cinza escuro": "#5a5a5a", "chumbo": "#4a4a4a", "grafite": "#3a3a3a", "prata": "#c0c0c0", "dourado": "#c9a227", "marrom": "#6b4226", "marrom claro": "#8b5e3c", "marrom escuro": "#4a2c17", "chocolate": "#3f2314", "vinho": "#5e1a24", "bordo": "#5e1a24", "bordô": "#5e1a24", "vermelho": "#c1272d", "vermelho escuro": "#8b1a1a", "rosa": "#e6a4c4", "rosa claro": "#f3c6dd", "rosa escuro": "#c65a8f", "rosa bebe": "#f7d6e6", "rosa bebê": "#f7d6e6", "pink": "#e91e8c", "salmao": "#f4a89a", "salmão": "#f4a89a", "coral": "#ff7f5e", "laranja": "#e8621a", "terracota": "#b25a3d", "mostarda": "#c9982a", "amarelo": "#f1c40f", "amarelo claro": "#f7dd6b", "verde": "#3f7d3f", "verde claro": "#7fbf6b", "verde escuro": "#1e4620", "verde militar": "#5a5c3a", "verde musgo": "#5b6b3e", "verde agua": "#7fcfc0", "verde água": "#7fcfc0", "verde bandeira": "#0a6b3d", "verde oliva": "#6b6b2e", "azul": "#2a5ca8", "azul claro": "#7fb3e0", "azul escuro": "#173d6b", "azul marinho": "#12233f", "marinho": "#12233f", "azul royal": "#1e40af", "azul serenity": "#a3c1d9", "turquesa": "#30c1c0", "ciano": "#2ec4c6", "roxo": "#6a3fa0", "lilas": "#c9a8e0", "lilás": "#c9a8e0", "lavanda": "#c9b6e0", "violeta": "#7d3c98", "jeans": "#4a6b8a", "azul jeans": "#4a6b8a", "denim": "#4a6b8a", "khaki": "#a89968", "caqui": "#a89968"};
+function normalizeColorNameForGuess(name){
+  return String(name || '')
+    .toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .trim();
+}
+/* Aproxima variações de gênero/grau do português (ex: preto/preta,
+   dourado/dourada, escuro/escura) pra um "radical" comum, assim "Preta"
+   também encontra a mesma cor cadastrada como "preto". */
+function stemColorWord(w){
+  if(w.length > 3 && (w.charAt(w.length-1) === 'o' || w.charAt(w.length-1) === 'a')){
+    return w.slice(0, -1);
+  }
+  return w;
+}
+function stemColorPhrase(phrase){
+  return phrase.split(' ').map(stemColorWord).join(' ');
+}
+var COLOR_NAME_HEX_STEMMED = (function(){
+  var out = {};
+  Object.keys(COLOR_NAME_HEX).forEach(function(key){
+    out[stemColorPhrase(key)] = COLOR_NAME_HEX[key];
+  });
+  return out;
+})();
+function guessColorHex(name){
+  var norm = normalizeColorNameForGuess(name);
+  if(!norm) return null;
+  if(COLOR_NAME_HEX[norm]) return COLOR_NAME_HEX[norm];
+  var stemmedNorm = stemColorPhrase(norm);
+  if(COLOR_NAME_HEX_STEMMED[stemmedNorm]) return COLOR_NAME_HEX_STEMMED[stemmedNorm];
+  var bestKey = null;
+  Object.keys(COLOR_NAME_HEX_STEMMED).forEach(function(key){
+    if(stemmedNorm.indexOf(key) >= 0 || key.indexOf(stemmedNorm) >= 0){
+      if(!bestKey || key.length > bestKey.length) bestKey = key;
+    }
+  });
+  return bestKey ? COLOR_NAME_HEX_STEMMED[bestKey] : null;
+}
+
+function applyConfig(cfg){
+  cfg = cfg || {};
+  if(cfg.whatsapp) WPP_NUMERO = String(cfg.whatsapp).replace(/\D/g,'') || WPP_NUMERO;
+
+  var taglineEl = document.getElementById('brandTagline');
+  if(taglineEl && cfg.tagline) taglineEl.textContent = cfg.tagline;
+
+  var headerWppEl = document.getElementById('headerWppLink');
+  if(headerWppEl){
+    var saudacao = 'Ola! \uD83D\uDC4B Vi o catalogo da TRAMA Store e tenho interesse em alguns produtos. Pode me ajudar? \uD83D\uDE0A';
+    headerWppEl.setAttribute('href', 'https://wa.me/'+WPP_NUMERO+'?text='+encodeURIComponent(saudacao));
+  }
+
+  var pagamentosEl = document.getElementById('footerPagamentos');
+  if(pagamentosEl && cfg.pagamentos) pagamentosEl.textContent = 'Aceitamos: '+cfg.pagamentos;
+
+  var politicaEl = document.getElementById('footerPolitica');
+  if(politicaEl && cfg.politica) politicaEl.textContent = cfg.politica;
+
+  /* Como o número de WhatsApp usado nos cards pode ter mudado, re-renderiza
+     o catálogo já carregado para atualizar os links dos botões. */
+  if(lastCatalogData !== null) renderCatalog(lastCatalogData);
+}
+
+function escAttr(v){
+  return String(v == null ? '' : v).replace(/"/g,'&quot;');
+}
+
+function normalizeItem(c){
+  /* Garante compatibilidade com itens antigos que ainda não tenham "sizes" */
+  if(!c.sizes){
+    c.sizes = c.size ? [{ size: c.size, qty: c.qty || 0 }] : [];
+  }
+  /* Garante compatibilidade com itens antigos sem "groupId" (cor única) */
+  if(!c.groupId) c.groupId = c.id;
+  /* Garante compatibilidade com itens antigos sem "colorHex" (bolinha da cor) */
+  if(!c.colorHex) c.colorHex = guessColorHex(c.color) || '#c9a96e';
+  return c;
+}
+
+function filterOptionsHtml(groupClass, values){
+  return values.map(function(v){
+    var vEsc = escAttr(v);
+    var vVal = escAttr(String(v).toLowerCase());
+    return '<label class="filter-check"><input type="checkbox" class="' + groupClass + '" value="' + vVal + '"> ' + vEsc + '</label>';
+  }).join('');
+}
+
+function filterGroupHtml(title, groupClass, values){
+  if(!values.length) return '';
+  return '<div class="filter-group">'
+    + '<button type="button" class="filter-group-title">'
+    +   '<span>'+title+'</span>'
+    +   '<svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'
+    + '</button>'
+    + '<div class="filter-options">'+filterOptionsHtml(groupClass,values)+'</div>'
+    + '</div>';
+}
+
+/* Agrupa TODAS as peças (inclusive sem estoque) por groupId — usado apenas
+   para montar as bolinhas de "outras cores" dentro da visualização em tela
+   cheia (detalhe da foto). O grid em si mostra cada cor como card separado. */
+function groupCatalogItems(catalog){
+  var map = {}, order = [];
+  for(var i=0;i<catalog.length;i++){
+    var c = catalog[i];
+    var gid = c.groupId || c.id;
+    if(!map[gid]){ map[gid] = []; order.push(gid); }
+    map[gid].push(c);
+  }
+  var result = {};
+  order.forEach(function(gid){ result[gid] = map[gid]; });
+  return result;
+}
+
+function colorQty(c){
+  var t=0;
+  for(var j=0;j<c.sizes.length;j++){ t += (c.sizes[j].qty||0); }
+  return t;
+}
+
+function buildWppBtnHtml(name, color, ref, esgotado){
+  var baseMsg = 'Ola! Quero a peca '+(name||'')+' - '+(color||'')+' (Ref: '+ref+')';
+  var wppPeca = 'https://wa.me/'+WPP_NUMERO+'?text='+encodeURIComponent(baseMsg);
+  return esgotado
+    ? '<span class="btn-esgotado">Indisponivel</span>'
+    : '<a href="'+wppPeca+'" data-basemsg="'+escAttr(baseMsg)+'" class="btn-peca-wpp" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="#fff" style="vertical-align:middle;margin-right:4px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg><span class="btn-wpp-label">Quero essa!</span></a>';
+}
+
+/* ======= Favoritos (lista pessoal do cliente, salva no navegador dele) ======= */
+function loadFavorites(){
+  try{ return JSON.parse(localStorage.getItem('trama_favoritos') || '[]'); }
+  catch(e){ return []; }
+}
+function saveFavorites(arr){
+  try{ localStorage.setItem('trama_favoritos', JSON.stringify(arr)); }catch(e){ /* sem espaco: sem problema, so nao salva desta vez */ }
+}
+var FAVORITES = loadFavorites();
+var CATALOG_ITEMS_BY_REF = {};
+
+function isFavorite(ref){
+  return FAVORITES.indexOf((ref || '').toLowerCase()) >= 0;
+}
+function updateFavFab(){
+  var badge = document.getElementById('favFabBadge');
+  if(!badge) return;
+  var n = FAVORITES.length;
+  badge.textContent = n;
+  badge.style.display = n > 0 ? 'flex' : 'none';
+}
+function toggleCardFavorite(btn, ref){
+  ref = (ref || '').toLowerCase();
+  var idx = FAVORITES.indexOf(ref);
+  if(idx >= 0){ FAVORITES.splice(idx, 1); } else { FAVORITES.push(ref); }
+  saveFavorites(FAVORITES);
+  if(btn) btn.classList.toggle('active', isFavorite(ref));
+  updateFavFab();
+}
+function buildFavMessage(){
+  var itens = FAVORITES.map(function(ref){ return CATALOG_ITEMS_BY_REF[ref]; }).filter(Boolean);
+  if(!itens.length) return '';
+  var linhas = itens.map(function(c){
+    return '- ' + (c.name || '') + (c.color ? ' (' + c.color + ')' : '') + ' — Ref: ' + (c.ref || '');
+  });
+  return 'Ola! Vi o catalogo da TRAMA Store e separei essas pecas, pode me ajudar? \uD83D\uDE0A\n\n' + linhas.join('\n');
+}
+function renderFavPanel(){
+  var list = document.getElementById('favPanelList');
+  var sendBtn = document.getElementById('favPanelSend');
+  if(!list) return;
+  var itens = FAVORITES.map(function(ref){ return CATALOG_ITEMS_BY_REF[ref]; }).filter(Boolean);
+  if(!itens.length){
+    list.innerHTML = '<div class="fav-panel-empty">Voce ainda nao favoritou nenhuma peca. Toque no coracao dos itens que gostar.</div>';
+    if(sendBtn) sendBtn.style.pointerEvents = 'none', sendBtn.style.opacity = '.5';
+    return;
+  }
+  if(sendBtn){ sendBtn.style.pointerEvents = ''; sendBtn.style.opacity = ''; }
+  list.innerHTML = itens.map(function(c){
+    var foto = c.photo || (c.photos && c.photos[0]) || '';
+    return '<div class="fav-panel-item">'
+      + (foto ? '<img src="'+foto+'" loading="lazy" decoding="async">' : '<div class="fav-panel-item-noimg">&#128087;</div>')
+      + '<div class="fav-panel-item-info">'
+      +   '<div class="fav-panel-item-name">'+escAttr(c.name||'')+'</div>'
+      +   '<div class="fav-panel-item-meta">'+escAttr(c.color||'')+' · R$ '+Number(c.price||0).toFixed(2).replace('.',',')+'</div>'
+      + '</div>'
+      + '<button type="button" class="fav-panel-item-remove" onclick="removeFavorite(\''+escAttr(c.ref.toLowerCase())+'\')">&times;</button>'
+      + '</div>';
+  }).join('');
+  if(sendBtn){
+    var msg = buildFavMessage();
+    sendBtn.href = 'https://wa.me/' + WPP_NUMERO + '?text=' + encodeURIComponent(msg);
+  }
+}
+function removeFavorite(ref){
+  toggleCardFavorite(null, ref);
+  var card = document.querySelector('.card[data-ref="'+ref+'"] .card-fav-btn');
+  if(card) card.classList.remove('active');
+  renderFavPanel();
+}
+
+/* ======= Compartilhar link direto de uma peca ======= */
+function showShareToast(msg){
+  var toast = document.getElementById('shareToast');
+  if(!toast) return;
+  toast.textContent = msg;
+  toast.classList.add('visible');
+  clearTimeout(showShareToast._t);
+  showShareToast._t = setTimeout(function(){ toast.classList.remove('visible'); }, 2200);
+}
+function buildShareUrl(ref){
+  var base;
+  try{
+    if(location.origin && location.origin !== 'null' && /^https?:$/.test(location.protocol)){
+      base = location.origin + location.pathname;
+    } else {
+      base = location.href.split('?')[0].split('#')[0];
+    }
+  }catch(e){ base = location.href; }
+  return base + '?p=' + encodeURIComponent(ref);
+}
+function shareCard(ref){
+  var url = buildShareUrl(ref);
+  // 1) tenta o compartilhamento nativo do celular
+  try{
+    if(navigator.share){
+      navigator.share({ title: 'TRAMA Store', text: 'Da uma olhada nessa peca:', url: url })
+        .catch(function(){ shareCardFallback(url); });
+      return;
+    }
+  }catch(e){ /* segue pro fallback abaixo */ }
+  shareCardFallback(url);
+}
+function shareCardFallback(url){
+  // 2) tenta copiar pra area de transferencia
+  try{
+    if(navigator.clipboard && navigator.clipboard.writeText && window.isSecureContext){
+      navigator.clipboard.writeText(url)
+        .then(function(){ showShareToast('Link copiado!'); })
+        .catch(function(){ window.prompt('Copie o link da peca:', url); });
+      return;
+    }
+  }catch(e){ /* segue pro prompt abaixo */ }
+  // 3) garantia final: sempre mostra o link pra copiar manualmente
+  window.prompt('Copie o link da peca:', url);
+}
+function scrollToCard(ref){
+  var card = document.querySelector('.card[data-ref="'+ref+'"]');
+  if(!card) return;
+  if(card.scrollIntoView) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  card.classList.add('card-highlight');
+  setTimeout(function(){ card.classList.remove('card-highlight'); }, 1500);
+}
+function buildFeaturedSectionHtml(title, items){
+  if(!items.length) return '';
+  var html = '<div class="featured-section"><div class="featured-section-title">'+title+'</div><div class="featured-scroll">';
+  items.forEach(function(c){
+    var foto = c.photo || (c.photos && c.photos[0]) || '';
+    var ref = (c.ref || '').toLowerCase();
+    html += '<div class="featured-mini-card" onclick="scrollToCard(\''+escAttr(ref)+'\')">'
+      + (foto ? '<img src="'+foto+'" loading="lazy" decoding="async">' : '<div class="featured-mini-noimg">&#128087;</div>')
+      + '<div class="featured-mini-name">'+escAttr(c.name||'')+'</div>'
+      + '<div class="featured-mini-price">R$ '+Number(c.price||0).toFixed(2).replace('.',',')+'</div>'
+      + '</div>';
+  });
+  html += '</div></div>';
+  return html;
+}
+
+function buildCardHtml(c, i){
+  var totalQtd=0;
+  for(var j=0;j<c.sizes.length;j++){ totalQtd+=(c.sizes[j].qty||0); }
+  var esgotado = totalQtd===0;
+  var agora = Date.now();
+  var novidade = c.createdAt && (agora-c.createdAt)<604800000;
+
+  var tamHtml='';
+  for(var j=0;j<c.sizes.length;j++){
+    var s=c.sizes[j];
+    if(s.qty>0){ tamHtml += '<button type="button" class="sz ok" data-size="'+s.size+'" onclick="selectSize(this)">'+s.size+'</button>'; }
+  }
+
+  var fotos=[];
+  if(c.photo) fotos.push(c.photo);
+  if(c.photos && c.photos.length>0){ for(var f=0;f<c.photos.length;f++){ fotos.push(c.photos[f]); } }
+
+  // as primeiras peças da grade carregam a foto na hora (é o que aparece
+  // sem rolar a tela); o resto só baixa quando estiver perto de aparecer —
+  // isso é o que faz o catálogo abrir rápido mesmo com muitas peças
+  var imgLoadAttr = i < 4 ? ' loading="eager"' : ' loading="lazy" decoding="async"';
+
+  var fotoHtml='';
+  if(fotos.length>1){
+    fotoHtml = '<div class="gallery" id="gal-'+i+'">';
+    for(var f=0;f<fotos.length;f++){ fotoHtml += '<img src="'+fotos[f]+'"'+imgLoadAttr+(esgotado?' class="foto-esgotado"':'')+'>'; }
+    fotoHtml += '</div>'
+      + '<button class="nav-btn prev" onclick="slideGal(\'gal-'+i+'\',-1);resetGalAutoplay(\'gal-'+i+'\')">&#10094;</button>'
+      + '<button class="nav-btn next" onclick="slideGal(\'gal-'+i+'\',1);resetGalAutoplay(\'gal-'+i+'\')">&#10095;</button>'
+      + '<div class="dots">';
+    for(var f=0;f<fotos.length;f++){ fotoHtml += '<span class="dot'+(f===0?' active':'')+'"></span>'; }
+    fotoHtml += '</div>';
+  } else if(fotos.length===1){
+    fotoHtml = '<img src="'+fotos[0]+'"'+imgLoadAttr+(esgotado?' class="foto-esgotado"':'')+'>';
+  } else {
+    fotoHtml = '<span style="font-size:56px;color:#ddd">&#128087;</span>';
+  }
+
+  var promoAtiva = !!(c.promo && c.promoOriginal && c.promoOriginal > c.price);
+
+  var badgeHtml='';
+  if(esgotado){ badgeHtml = '<span class="badge esgotado">ESGOTADO</span><div class="risco"></div>'; }
+  else if(promoAtiva){ badgeHtml = '<span class="badge promo">PROMOÇÃO</span>'; }
+  else if(novidade){ badgeHtml = '<span class="badge novidade">NOVIDADE</span>'; }
+
+  var pvHtml = c.price ? 'R$ '+Number(c.price).toFixed(2).replace('.',',') : '';
+  var pcHtml = (c.priceCard && c.priceCard!==c.price) ? 'R$ '+Number(c.priceCard).toFixed(2).replace('.',',') : '';
+  var poHtml = promoAtiva ? 'R$ '+Number(c.promoOriginal).toFixed(2).replace('.',',') : '';
+  var ref = c.ref || ('TR'+String(i+1).padStart(3,'0'));
+  var btnWpp = buildWppBtnHtml(c.name, c.color, ref, esgotado);
+  var refLower = ref.toLowerCase();
+  var favActive = isFavorite(refLower);
+  var favShareHtml = '<div class="card-corner-actions">'
+    + '<button type="button" class="card-fav-btn'+(favActive?' active':'')+'" onclick="event.stopPropagation();toggleCardFavorite(this,\''+escAttr(refLower)+'\')" title="Favoritar"><svg width="18" height="18" viewBox="0 0 24 24" fill="'+(favActive?'currentColor':'none')+'" stroke="currentColor" stroke-width="2"><path d="M12 21s-6.7-4.35-9.3-8.2C1 10.1 1.6 6.6 4.6 5.1c2.4-1.2 5 0 7.4 3 2.4-3 5-4.2 7.4-3 3 1.5 3.6 5 1.9 7.7C18.7 16.65 12 21 12 21z"/></svg></button>'
+    + '<button type="button" class="card-share-btn" onclick="event.stopPropagation();shareCard(\''+escAttr(refLower)+'\')" title="Compartilhar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.6" y1="10.6" x2="15.4" y2="6.4"/><line x1="8.6" y1="13.4" x2="15.4" y2="17.6"/></svg></button>'
+    + '</div>';
+
+  var sizesAttr = c.sizes.map(function(s){ return s.size; }).join(',');
+
+  var precosHtml = promoAtiva
+    ? '<div class="card-prices promo-prices">'
+      + '<div class="promo-de">De <span class="promo-de-value">'+poHtml+'</span></div>'
+      + '<div class="price-main-row"><span class="price-label">Por</span><span class="price-main promo-price">'+pvHtml+'</span></div>'
+      + (pcHtml ? '<div class="price-card-row">ou <span class="price-card">'+pcHtml+'</span> no cartão</div>' : '')
+      + '</div>'
+    : '<div class="card-prices">'
+      + '<div class="price-main-row"><span class="price-label">À vista</span><span class="price-main">'+pvHtml+'</span></div>'
+      + (pcHtml ? '<div class="price-card-row">ou <span class="price-card">'+pcHtml+'</span> no cartão</div>' : '')
+      + '</div>';
+
+  return '<div class="card'+(esgotado?' card-esgotado':'')+'"'
+    + ' data-nome="'+escAttr((c.name||'').toLowerCase())+'"'
+    + ' data-cor="'+escAttr((c.color||'').toLowerCase())+'"'
+    + ' data-ref="'+escAttr(ref.toLowerCase())+'"'
+    + ' data-categoria="'+escAttr((c.category||'').toLowerCase())+'"'
+    + ' data-genero="'+escAttr((c.gender||'').toLowerCase())+'"'
+    + ' data-subcategoria="'+escAttr((c.subcategory||'').toLowerCase())+'"'
+    + ' data-jeans="'+(c.jeans?'1':'0')+'"'
+    + ' data-sizes="'+escAttr(sizesAttr)+'"'
+    + ' data-disp="'+(esgotado?'0':'1')+'"'
+    + ' data-promo="'+(promoAtiva?'1':'0')+'"'
+    + ' data-price="'+(c.price||0)+'"'
+    + ' data-groupid="'+escAttr(c.groupId||c.id)+'">'
+    + '<div class="card-img">'+badgeHtml+fotoHtml+favShareHtml+'</div>'
+    + '<div class="card-info">'
+    + '<div class="card-name">'+(c.name||'')+'</div>'
+    + '<div class="card-color">'+(c.color||'')+' | Ref: '+ref+'</div>'
+    + (tamHtml ? '<div class="size-hint">Selecione o tamanho <span class="size-hint-opt">(opcional)</span></div>' : '')
+    + '<div class="card-sizes">'+tamHtml+'</div>'
+    + precosHtml
+    + btnWpp
+    + '</div></div>';
+}
+
+/* Monta as bolinhas de "outras cores desta peça" dentro da visualização em
+   tela cheia (aberta ao clicar na foto do card). Se a peça só tiver uma cor
+   cadastrada, não mostra nada. */
+function renderDetailColorSwatches(card){
+  var wrap = document.getElementById('detailColorSwatches');
+  if(!wrap) return;
+  var gid = card.getAttribute('data-groupid');
+  var siblings = (gid && CATALOG_GROUPS_BY_ID[gid]) ? CATALOG_GROUPS_BY_ID[gid] : [];
+  if(siblings.length < 2){
+    wrap.innerHTML = '';
+    wrap.style.display = 'none';
+    return;
+  }
+  var activeRef = card.getAttribute('data-ref');
+  var html = '';
+  for(var k=0;k<siblings.length;k++){
+    var col = siblings[k];
+    var out = colorQty(col) <= 0;
+    var hex = col.colorHex || '#c9a96e';
+    var isActive = col.ref && activeRef && col.ref.toLowerCase() === activeRef;
+    var label = (col.color||'') + (out ? ' (esgotado)' : '');
+    html += '<button type="button" class="color-swatch-btn'+(isActive?' active':'')+(out?' out':'')+'" style="background:'+escAttr(hex)+'" data-item-id="'+escAttr(col.id)+'" onclick="selectDetailColor(this)" title="'+escAttr(label)+'" aria-label="'+escAttr(label)+'"></button>';
+  }
+  wrap.innerHTML = html;
+  wrap.style.display = 'flex';
+}
+
+/* Troca, dentro da visualização em tela cheia, para as fotos/nome de outra
+   cor da mesma peça — sem precisar fechar e procurar o outro card no grid. */
+function selectDetailColor(btn){
+  var itemId = btn.getAttribute('data-item-id');
+  var item = CATALOG_ITEMS_BY_ID[itemId];
+  if(!item) return;
+
+  var wrap = document.getElementById('detailColorSwatches');
+  if(wrap){
+    wrap.querySelectorAll('.color-swatch-btn').forEach(function(b){
+      b.classList.toggle('active', b === btn);
+    });
+  }
+
+  var fotos = [];
+  if(item.photo) fotos.push(item.photo);
+  if(item.photos && item.photos.length) fotos = fotos.concat(item.photos);
+  detailState = { photos: fotos.length ? fotos : [''], index: 0 };
+  renderDetailImg();
+
+  var ref = item.ref || '';
+  document.getElementById('detailName').textContent = item.name || '';
+  document.getElementById('detailInfo').textContent = (item.color || '') + (ref ? ' | Ref: '+ref : '');
+}
+
+function renderCatalog(rawCatalog){
+ try{
+  var flat = (rawCatalog || []).map(normalizeItem);
+
+  /* Mapas usados para as bolinhas de "outras cores" na tela cheia — incluem
+     TODAS as peças (mesmo sem estoque), pra mostrar a cor esgotada também. */
+  CATALOG_ITEMS_BY_ID = {};
+  CATALOG_ITEMS_BY_REF = {};
+  flat.forEach(function(c){
+    CATALOG_ITEMS_BY_ID[c.id] = c;
+    if(c.ref) CATALOG_ITEMS_BY_REF[c.ref.toLowerCase()] = c;
+  });
+  CATALOG_GROUPS_BY_ID = groupCatalogItems(flat);
+
+  /* No grid principal, cada cor aparece como card individual — assim o
+     cliente vê todas as opções rolando a tela, sem precisar abrir nada.
+     Peças cadastradas mais recentemente aparecem primeiro. */
+  var catalog = flat.filter(function(c){ return colorQty(c) > 0; });
+  catalog.sort(function(a,b){ return (b.createdAt||0) - (a.createdAt||0); });
+
+  var categoriasSet={}, generosSet={}, tamanhosSet={}, coresSet={}, subcategoriasSet={};
+  var temPromo=false, temJeans=false;
+  for(var i=0;i<catalog.length;i++){
+    var c=catalog[i];
+    if(c.category) categoriasSet[c.category]=true;
+    if(c.gender) generosSet[c.gender]=true;
+    if(c.color) coresSet[c.color]=true;
+    if(c.subcategory) subcategoriasSet[c.subcategory]=true;
+    for(var j=0;j<c.sizes.length;j++){ tamanhosSet[c.sizes[j].size]=true; }
+    if(c.promo && c.promoOriginal && c.promoOriginal > c.price) temPromo=true;
+    if(c.jeans) temJeans=true;
+  }
+  var categoriasArr=Object.keys(categoriasSet).sort();
+  var generosArr=Object.keys(generosSet).sort();
+  var coresArr=Object.keys(coresSet).sort();
+  var SUBCATEGORY_ORDER=['Vestidos','Blusas','Shorts e bermudas','Calças','Bermudas','Camisas','Camisetas','Conjuntos','Saias','Casacos','Chinelos','Rasteiras','Sandálias','Papete','Tênis','Sapatilhas'];
+  var subcategoriasArr=Object.keys(subcategoriasSet).sort(function(a,b){
+    var ia=SUBCATEGORY_ORDER.indexOf(a), ib=SUBCATEGORY_ORDER.indexOf(b);
+    if(ia===-1 && ib===-1) return a.localeCompare(b);
+    if(ia===-1) return 1;
+    if(ib===-1) return -1;
+    return ia-ib;
+  });
+  var SIZE_ORDER=['PP','P','M','G','GG','XG','XGG','U','34','35','36','37','38','39','40','41','42','43','44'];
+  var tamanhosArr=Object.keys(tamanhosSet).sort(function(a,b){
+    var ia=SIZE_ORDER.indexOf(a.toUpperCase()), ib=SIZE_ORDER.indexOf(b.toUpperCase());
+    if(ia===-1 && ib===-1) return a.localeCompare(b);
+    if(ia===-1) return 1;
+    if(ib===-1) return -1;
+    return ia-ib;
+  });
+
+  var cardsHtml='';
+  for(var i=0;i<catalog.length;i++){ cardsHtml += buildCardHtml(catalog[i], i); }
+
+  var novidades = catalog.filter(function(c){ return c.createdAt && (Date.now()-c.createdAt) < 604800000; }).slice(0, 12);
+  var selecionados = catalog.filter(function(c){ return c.featured; }).slice(0, 12);
+  var featuredHtml = buildFeaturedSectionHtml('✨ Novidades da semana', novidades)
+    + buildFeaturedSectionHtml('🔥 Selecionados pra você', selecionados);
+  var featuredWrap = document.getElementById('featuredSections');
+  if(featuredWrap) featuredWrap.innerHTML = featuredHtml;
+
+  var sidebarPromo = temPromo
+    ? '<div class="filter-group"><div class="filter-options" style="display:flex;margin-top:0"><label class="filter-check promo-filter-check"><input type="checkbox" id="fPromo"> PROMOÇÃO</label></div></div>'
+    : '';
+  var sidebarJeans = temJeans
+    ? '<div class="filter-group"><div class="filter-options" style="display:flex;margin-top:0"><label class="filter-check"><input type="checkbox" id="fJeans"> Somente jeans</label></div></div>'
+    : '';
+  var sidebarHtml = sidebarPromo
+    + sidebarJeans
+    + filterGroupHtml('Categoria', 'f-categoria', categoriasArr)
+    + filterGroupHtml('Subcategoria', 'f-subcategoria', subcategoriasArr)
+    + filterGroupHtml('Genero', 'f-genero', generosArr)
+    + filterGroupHtml('Tamanho', 'f-tamanho', tamanhosArr)
+    + filterGroupHtml('Cor', 'f-cor', coresArr);
+
+  document.getElementById('grid').innerHTML = cardsHtml;
+  document.getElementById('filterGroupsContainer').innerHTML = sidebarHtml;
+
+  /* Re-anexa comportamentos que dependem do conteúdo recém-gerado */
+  document.querySelectorAll('.filter-group-title').forEach(function(btn){
+    btn.addEventListener('click', function(){ btn.closest('.filter-group').classList.toggle('open'); });
+  });
+  document.querySelectorAll('.f-categoria,.f-subcategoria,.f-genero,.f-tamanho,.f-cor').forEach(function(el){
+    el.addEventListener('change', filtrarPecas);
+  });
+  if(document.getElementById('fPromo')){
+    document.getElementById('fPromo').addEventListener('change', filtrarPecas);
+  }
+  if(document.getElementById('fJeans')){
+    document.getElementById('fJeans').addEventListener('change', filtrarPecas);
+  }
+  document.querySelectorAll('.gallery').forEach(function(gal){ startGalAutoplay(gal.id); });
+
+  updateFavFab();
+
+  /* Link direto pra uma peça específica: ?p=REF na URL abre a peça
+     automaticamente em tela cheia (só na primeira vez que o catálogo carrega) */
+  if(!renderCatalog._deepLinkHandled){
+    renderCatalog._deepLinkHandled = true;
+    try{
+      var params = new URLSearchParams(location.search);
+      var wantedRef = (params.get('p') || params.get('peca') || '').toLowerCase();
+      if(wantedRef){
+        var wantedCard = document.querySelector('.card[data-ref="'+wantedRef+'"]');
+        if(wantedCard){
+          setTimeout(function(){
+            if(wantedCard.scrollIntoView) wantedCard.scrollIntoView({ behavior: 'auto', block: 'center' });
+            openDetail(wantedCard);
+          }, 60);
+        }
+      }
+    }catch(e){ /* URLSearchParams indisponivel ou link mal formado: ignora */ }
+  }
+
+  filtrarPecas();
+  ordenarPecas();
+ }catch(e){
+  // nunca deixa a tela presa em "Carregando catalogo..." por um erro
+  // inesperado — mostra uma mensagem clara em vez de girar pra sempre
+  console.error('Erro ao montar o catalogo:', e);
+  var gridEl = document.getElementById('grid');
+  if(gridEl) gridEl.innerHTML = '';
+  var errEl = document.getElementById('errorState');
+  if(errEl) errEl.style.display = 'block';
+ }
+}
+
+/* ======= Inicialização do FAB de favoritos (uma única vez) ======= */
+(function initFavoritesUI(){
+  try{
+    var fab = document.getElementById('favFab');
+    var overlay = document.getElementById('favPanelOverlay');
+    var closeBtn = document.getElementById('favPanelClose');
+    var clearBtn = document.getElementById('favPanelClear');
+    if(!fab || !overlay || !closeBtn || !clearBtn) return;
+    fab.addEventListener('click', function(){
+      renderFavPanel();
+      overlay.classList.add('visible');
+    });
+    closeBtn.addEventListener('click', function(){ overlay.classList.remove('visible'); });
+    overlay.addEventListener('click', function(e){ if(e.target === overlay) overlay.classList.remove('visible'); });
+    clearBtn.addEventListener('click', function(){
+      if(!FAVORITES.length) return;
+      if(!window.confirm('Limpar todos os favoritos?')) return;
+      FAVORITES = [];
+      saveFavorites(FAVORITES);
+      document.querySelectorAll('.card-fav-btn.active').forEach(function(b){ b.classList.remove('active'); });
+      updateFavFab();
+      renderFavPanel();
+    });
+    updateFavFab();
+  }catch(e){
+    // nunca deixa um erro aqui travar o resto do catálogo (a ligação com o
+    // Firebase é registrada logo depois deste bloco no código)
+    console.error('Falha ao iniciar favoritos:', e);
+  }
+})();
+
+/* Rede de segurança: se depois de um tempo bom o catálogo ainda não
+   carregou (Firebase lento, permissão negada, erro de script em algum
+   outro ponto da página etc.), mostra um aviso em vez de girar pra
+   sempre em "Carregando catálogo..." */
+setTimeout(function(){
+  if(lastCatalogData === null){
+    var gridEl = document.getElementById('grid');
+    var errEl = document.getElementById('errorState');
+    if(gridEl) gridEl.innerHTML = '';
+    if(errEl){
+      errEl.style.display = 'block';
+      errEl.textContent = 'Isso esta demorando mais que o normal pra carregar. Verifique sua internet e tente recarregar a pagina em instantes.';
+    }
+  }
+}, 12000);
+</script><script>var CATALOG_CACHE_KEY="trama_public_catalog_cache_v1";var INITIAL_CATALOG_DATA=[{"color":"Bege","colorHex":"#d8c3a0","cost":32.44,"createdAt":1784588681283,"groupId":"vmrtu0v9exe5cm","id":"vmrtu0v9exe5cm","name":"Vestido Viscolinho floral","photo":null,"price":55.9,"priceCard":59.9,"ref":"TR001","sizes":[{"qty":0,"size":"P"}]},{"color":"Jeans","colorHex":"#4a6b8a","cost":59.9,"createdAt":1785006565294,"groupId":"vms0qtkmm8kwun","id":"vms0qtkmm8kwun","name":"Calça baggy","photo":null,"price":89.9,"priceCard":95.9,"ref":"TR002","sizes":[{"qty":0,"size":"36"}]},{"category":"Moda Feminina","color":"Jeans","colorHex":"#4a6b8a","cost":35.99,"createdAt":1785006776197,"gender":"Feminino","groupId":"vms0qy3d1fcot3","id":"vms0qy3d1fcot3","jeans":true,"name":"Short Destroyed","photo":null,"photos":[],"price":54.9,"priceCard":59.9,"promo":false,"ref":"TR003","sizes":[{"qty":0,"size":"38"},{"qty":1,"size":"40"},{"qty":1,"size":"42"},{"qty":0,"size":"44"},{"qty":1,"size":"36"}],"subcategory":"Shorts e bermudas"},{"color":"Preto","colorHex":"#1a1a1a","cost":32.99,"createdAt":1785382604857,"groupId":"vms6ypem174pf4","id":"vms6ypem174pf4","name":"Short curto","photo":null,"price":45.9,"priceCard":49.9,"ref":"TR004","sizes":[{"qty":0,"size":"42"}]},{"color":"Vinho","colorHex":"#5e1a24","cost":95.9,"createdAt":1785382776543,"groupId":"vms6yt333ybtuq","id":"vms6yt333ybtuq","name":"Vestido linho evasê","photo":null,"price":110,"priceCard":115.9,"ref":"TR005","sizes":[{"qty":0,"size":"P"}]},{"category":"Moda Masculina","color":"Marrom","colorHex":"#6b4226","cost":32.9,"createdAt":1785382978686,"gender":"Masculino","groupId":"vms6yxf26791wc","id":"vms6yxf26791wc","jeans":false,"name":"Blusa frio moletinho","photo":null,"price":54.9,"priceCard":59.9,"promo":false,"ref":"TR006","sizes":[{"qty":0,"size":"P"},{"qty":1,"size":"M"},{"qty":1,"size":"G"}],"subcategory":"Blusas"},{"color":"Bege","colorHex":"#d8c3a0","cost":33,"createdAt":1785383163011,"groupId":"vms6z1dab9zo3a","id":"vms6z1dab9zo3a","name":"Blusão Frio forrado","photo":null,"price":150,"priceCard":155.9,"ref":"TR007","sizes":[{"qty":0,"size":"G2"}]},{"category":"Moda Masculina","color":"Rosa","colorHex":"#e6a4c4","cost":27.93,"createdAt":1785383440788,"gender":"Masculino","groupId":"vms6z7bmcesewu","id":"vms6z7bmcesewu","jeans":false,"name":"Regata corte a lazer","photo":null,"price":39.9,"priceCard":45.9,"promo":false,"ref":"TR008","sizes":[{"qty":1,"size":"P"},{"qty":-1,"size":"M"},{"qty":1,"size":"G"}],"subcategory":"Camisetas"},{"category":"Moda Feminina","color":"Preto","colorHex":"#1a1a1a","cost":24.9,"createdAt":1785383590316,"gender":"Feminino","groupId":"vms6zaizw3b9cm","id":"vms6zaizw3b9cm","name":"Blusa um ombro amarração","photo":null,"price":39.9,"priceCard":45.9,"promo":false,"ref":"TR009","sizes":[{"qty":0,"size":"GG"}]},{"category":"Moda Feminina","color":"Off white","colorHex":"#f5f0e6","cost":42.99,"createdAt":1785383758413,"gender":"Feminino","groupId":"vms6ze4p8yat3c","id":"vms6ze4p8yat3c","name":"Rasteira Vizzano amarração","photo":null,"price":59.9,"priceCard":65.9,"ref":"TR010","sizes":[{"qty":0,"size":"36"},{"qty":0,"size":"37"}]},{"category":"Moda Feminina","color":"Marrom","colorHex":"#6b4226","cost":55.93,"createdAt":1785589081490,"gender":"Feminino","groupId":"vmsadmx026napk","id":"vmsadmx026napk","jeans":false,"name":"Vestido justo microfibra com gola halter","photo":null,"photos":[],"price":89.9,"priceCard":95.9,"promo":false,"ref":"TR012","sizes":[{"qty":1,"size":"P"},{"qty":0,"size":"M"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Vermelho","colorHex":"#c1272d","cost":39.9,"createdAt":1785624165058,"gender":"Feminino","groupId":"vmsayivnm30vvx","id":"vmsayivnm30vvx","jeans":false,"name":"Vestino Evasê curto em Viscolinho","photo":null,"photos":[],"price":65.9,"priceCard":69.9,"promo":false,"ref":"TR012","sizes":[{"qty":1,"size":"P"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Multicores","colorHex":"#c9a96e","cost":60.13,"createdAt":1785624675671,"gender":"Feminino","groupId":"vmsayttna190dp","id":"vmsayttna190dp","jeans":false,"name":"Vestido estampa geométrica amarração","photo":null,"photos":[],"price":105.9,"priceCard":109.9,"promo":false,"ref":"TR013","sizes":[{"qty":1,"size":"M"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Bege","colorHex":"#d8c3a0","cost":55.93,"createdAt":1785624942488,"gender":"Feminino","groupId":"vmsayzjiw128gf","id":"vmsayzjiw128gf","jeans":false,"name":"Vestido Midi Tricô canelado","photo":null,"photos":[],"price":85.9,"priceCard":89.9,"promo":false,"ref":"TR014","sizes":[{"qty":1,"size":"P"},{"qty":1,"size":"M"},{"qty":1,"size":"G"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Bordô","colorHex":"#5e1a24","cost":39.9,"createdAt":1785625069349,"gender":"Feminino","groupId":"vmsaz29etoi60y","id":"vmsaz29etoi60y","jeans":false,"name":"Vestido evasê Midi tricoline","photo":null,"price":69.9,"priceCard":74.9,"promo":false,"ref":"TR015","sizes":[{"qty":1,"size":"P"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Preto","colorHex":"#1a1a1a","cost":59.9,"createdAt":1785625278452,"gender":"Feminino","groupId":"vmsaz6qr7fx2wm","id":"vmsaz6qr7fx2wm","jeans":false,"name":"Vestido Midi lastex com gola halter e babado","photo":null,"photos":[],"price":85.9,"priceCard":89.9,"promo":false,"ref":"TR016","sizes":[{"qty":0,"size":"P"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Terracota","colorHex":"#b25a3d","cost":55.93,"createdAt":1785625566385,"gender":"Feminino","groupId":"vmsazcwxd459vx","id":"vmsazcwxd459vx","jeans":false,"name":"Vestido justo microfibra com gola halter","photo":null,"photos":[],"price":89.9,"priceCard":95.9,"promo":false,"ref":"TR017","sizes":[{"qty":1,"size":"G"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Vermelho","colorHex":"#c1272d","cost":55.93,"createdAt":1785626668345,"gender":"Feminino","groupId":"vmsb00j7c57abe","id":"vmsb00j7c57abe","jeans":false,"name":"Vestido long mid um ombro só","photo":null,"photos":[],"price":89.9,"priceCard":95.9,"promo":false,"ref":"TR018","sizes":[{"qty":0,"size":"P"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Vermelho","colorHex":"#c1272d","cost":53.13,"createdAt":1785626830938,"gender":"Feminino","groupId":"vmsb040nudtvo9","id":"vmsb040nudtvo9","jeans":false,"name":"Vestido frente única poliéster e elastano forrado","photo":null,"photos":[],"price":89.9,"priceCard":95.9,"promo":false,"ref":"TR019","sizes":[{"qty":1,"size":"M"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Marrom","colorHex":"#6b4226","cost":34.93,"createdAt":1785627026908,"gender":"Feminino","groupId":"vmsb087vg50elz","id":"vmsb087vg50elz","jeans":false,"name":"Vestido Midi algodão só costas abertas e fenda","photo":null,"photos":[],"price":49.9,"priceCard":54.9,"promo":false,"ref":"TR020","sizes":[{"qty":1,"size":"M"}],"subcategory":"Vestidos"},{"category":"Moda Feminina","color":"Azul bebê","colorHex":"#2a5ca8","cost":33,"createdAt":1785627153972,"gender":"Feminino","groupId":"vmsb0axwyvagtd","id":"vmsb0axwyvagtd","jeans":false,"name":"Camisa regata estruturada Muscle Tee","photo":null,"price":49.9,"priceCard":55.9,"promo":false,"ref":"TR021","sizes":[{"qty":1,"size":"M"}],"subcategory":"Camisas"},{"category":"Moda Masculina","color":"Branco","colorHex":"#ffffff","cost":20.93,"createdAt":1785701388169,"gender":"Masculino","groupId":"vmsc8i1e150osq","id":"vmsc8i1e150osq","jeans":false,"name":"Regata Confort corte a lazer","photo":null,"photos":[],"price":39.9,"priceCard":45.9,"promo":false,"ref":"TR022","sizes":[{"qty":1,"size":"P"}],"subcategory":"Camisetas"},{"category":"Moda Masculina","color":"Azul marinho","colorHex":"#12233f","cost":20.93,"createdAt":1785701556403,"gender":"Masculino","groupId":"vmsc8ln77qw7cg","id":"vmsc8ln77qw7cg","jeans":false,"name":"Regata Confort texturizada","photo":null,"photos":[],"price":39.9,"priceCard":45.9,"promo":false,"ref":"TR023","sizes":[{"qty":1,"size":"P"}],"subcategory":"Camisetas"},{"category":"Moda Feminina","color":"Roxo","colorHex":"#6a3fa0","cost":18.13,"createdAt":1785701805104,"gender":"Feminino","groupId":"vmsc8qz3hhai71","id":"vmsc8qz3hhai71","jeans":false,"name":"Camiseta confort algodão","photo":null,"photos":[],"price":34.9,"priceCard":39.9,"promo":false,"ref":"TR024","sizes":[{"qty":1,"size":"PP"}],"subcategory":"Camisas"},{"category":"Calçados","color":"Caramelo","colorHex":"#b5651d","cost":22.9,"createdAt":1785801428401,"gender":"Feminino","groupId":"vmsdw28xdimrs5","id":"vmsdw28xdimrs5","jeans":false,"name":"Chinelo PVC Strass","photo":null,"photos":[],"price":39.9,"priceCard":45.9,"promo":false,"ref":"TR025","sizes":[{"qty":1,"size":"35"},{"qty":1,"size":"36"},{"qty":1,"size":"38"}],"subcategory":"Chinelos"},{"category":"Calçados","color":"Preta","colorHex":"#1a1a1a","cost":30,"createdAt":1785802104952,"gender":"Feminino","groupId":"vmsdwgqyfz4pny","id":"vmsdwgqyfz4pny","jeans":false,"name":"Rasteira Strass","photo":null,"photos":[],"price":54.9,"priceCard":54.9,"promo":false,"ref":"TR026","sizes":[{"qty":1,"size":"34"},{"qty":1,"size":"35"},{"qty":1,"size":"36"},{"qty":1,"size":"37"},{"qty":1,"size":"38"},{"qty":1,"size":"39"}],"subcategory":"Rasteiras"},{"category":"Calçados","color":"Cotton","colorHex":"#c9a96e","cost":30,"createdAt":1785803143488,"gender":"Feminino","groupId":"vmsdx30aolmqs8","id":"vmsdx30aolmqs8","jeans":false,"name":"Rasteira Strass","photo":null,"photos":[],"price":49.9,"priceCard":54.9,"promo":false,"ref":"TR027","sizes":[{"qty":1,"size":"35"},{"qty":1,"size":"36"},{"qty":1,"size":"37"},{"qty":1,"size":"38"},{"qty":1,"size":"39"}],"subcategory":"Rasteiras"},{"category":"Calçados","color":"Preto","colorHex":"#1a1a1a","cost":30,"createdAt":1785805181866,"gender":"Feminino","groupId":"vmsdyap4aa6g9t","id":"vmsdyap4aa6g9t","jeans":false,"name":"Chinelo tiras pedraria","photo":null,"photos":[],"price":49.9,"priceCard":54.9,"promo":false,"ref":"TR028","sizes":[{"qty":1,"size":"35/36"},{"qty":1,"size":"37/38"}],"subcategory":"Chinelos"},{"category":"Calçados","color":"Caramelo","colorHex":"#b5651d","cost":30,"createdAt":1785806363050,"gender":"Feminino","groupId":"vmsdz00iysm3nz","id":"vmsdz00iysm3nz","jeans":false,"name":"Chinelo Confort Tricô","photo":null,"photos":[],"price":45.9,"priceCard":49.9,"promo":false,"ref":"TR029","sizes":[{"qty":0,"size":"35/36"}],"subcategory":"Chinelos"},{"category":"Calçados","color":"Off white","colorHex":"#f5f0e6","cost":22.8,"createdAt":1785807245855,"gender":"Feminino","groupId":"vmsdzixp9znvii","id":"vmsdzixp9znvii","jeans":false,"name":"Rasteira tiras","photo":null,"price":45.9,"priceCard":49.9,"promo":false,"ref":"TR030","sizes":[{"qty":1,"size":"36"},{"qty":1,"size":"39"}],"subcategory":"Rasteiras"},{"category":"Calçados","color":"Caramelo","colorHex":"#b5651d","cost":35.9,"createdAt":1785808005712,"gender":"Feminino","groupId":"vmsdzz80gstf2u","id":"vmsdzz80gstf2u","jeans":false,"name":"Rasteira detalhes Corda","photo":null,"price":59.9,"priceCard":65.9,"promo":false,"ref":"TR031","sizes":[{"qty":1,"size":"37"},{"qty":1,"size":"39"}],"subcategory":"Rasteiras"},{"category":"Calçados","color":"Cotton","colorHex":"#c9a96e","cost":30,"createdAt":1785853754026,"gender":"Feminino","groupId":"vmser7rmy215ou","id":"vmser7rmy215ou","jeans":false,"name":"Rasteira tiras largas detalhe metal","photo":null,"price":54.9,"priceCard":59.9,"promo":false,"ref":"TR032","sizes":[{"qty":1,"size":"36"}],"subcategory":""},{"category":"Moda Feminina","color":"Amarelo","colorHex":"#f1c40f","cost":79.9,"createdAt":1785876498339,"gender":"Feminino","groupId":"vmsf4r99fx19hz","id":"vmsf4r99fx19hz","jeans":false,"name":"Vestido Midi listrado","photo":null,"price":89.9,"priceCard":95.9,"promo":false,"ref":"TR033","sizes":[{"qty":0,"size":"M"}],"subcategory":"Vestidos"},{"category":"Calçados","color":"Caramelo","colorHex":"#b5651d","cost":41,"createdAt":1785879916453,"gender":"Feminino","groupId":"vmsf6sip0v3x3w","id":"vmsf6sip0v3x3w","jeans":false,"name":"Sandália salto bloco, detalhes artesanais","photo":null,"price":65.9,"priceCard":69.9,"promo":false,"ref":"TR034","sizes":[{"qty":1,"size":"37"}],"subcategory":"Sandálias"},{"category":"Calçados","color":"Dourado","colorHex":"#c9a227","cost":34,"createdAt":1785881239627,"gender":"Feminino","groupId":"vmsf7kvntgy6kj","id":"vmsf7kvntgy6kj","jeans":false,"name":"Rasteira tira metálica","photo":null,"photos":[],"price":55.9,"priceCard":59.9,"promo":false,"ref":"TR035","sizes":[{"qty":1,"size":"36"},{"qty":1,"size":"39"}],"subcategory":"Rasteiras"},{"category":"Calçados","color":"Preta","colorHex":"#1a1a1a","cost":35,"createdAt":1785881918960,"gender":"Feminino","groupId":"vmsf7zfu7tdumy","id":"vmsf7zfu7tdumy","jeans":false,"name":"Rasteira detalhes corda","photo":null,"photos":[],"price":59.9,"priceCard":65.9,"promo":false,"ref":"TR036","sizes":[{"qty":1,"size":"36"},{"qty":1,"size":"37"}],"subcategory":"Rasteiras"},{"category":"Calçados","color":"Bege","colorHex":"#d8c3a0","cost":41.9,"createdAt":1785882585104,"gender":"Feminino","groupId":"vmsf8dpu8x8ex2","id":"vmsf8dpu8x8ex2","jeans":false,"name":"Rasteira detalhes metal","photo":null,"photos":[],"price":54.9,"priceCard":59.9,"promo":false,"ref":"TR037","sizes":[{"qty":1,"size":"35"}],"subcategory":"Rasteiras"},{"category":"Calçados","color":"Caramelo","colorHex":"#b5651d","cost":29.8,"createdAt":1785883546454,"gender":"Feminino","groupId":"vmsf8ybmetlqrd","id":"vmsf8ybmetlqrd","jeans":false,"name":"Chinelo tiras pedraria","photo":null,"photos":[],"price":49.9,"priceCard":54.9,"promo":false,"ref":"TR038","sizes":[{"qty":1,"size":"35/36"},{"qty":1,"size":"37/38"}],"subcategory":"Chinelos"},{"category":"Calçados","color":"Cotton","colorHex":"#c9a96e","cost":38,"createdAt":1785884127273,"gender":"Feminino","groupId":"vmsf9ars9xlsgj","id":"vmsf9ars9xlsgj","jeans":false,"name":"Papete texturizada","photo":null,"photos":[],"price":59.9,"priceCard":64.9,"promo":false,"ref":"TR039","sizes":[{"qty":1,"size":"38"}],"subcategory":""},{"category":"Calçados","color":"Preta","colorHex":"#1a1a1a","cost":35,"createdAt":1785884936568,"gender":"Feminino","groupId":"vmsf9s48oqh5n6","id":"vmsf9s48oqh5n6","jeans":false,"name":"Papete tranças","photo":null,"price":59.9,"priceCard":64.9,"promo":false,"ref":"TR040","sizes":[{"qty":1,"size":"37"}],"subcategory":"Papete"},{"category":"Calçados","color":"Preta","colorHex":"#1a1a1a","cost":33,"createdAt":1785965536741,"gender":"Feminino","groupId":"vmsglrnqdd118w","id":"vmsglrnqdd118w","jeans":false,"name":"Sandália baixa salto bloco","photo":null,"photos":[],"price":65.9,"priceCard":69.9,"promo":false,"ref":"TR041","sizes":[{"qty":1,"size":"35"}],"subcategory":"Sandálias"},{"category":"Calçados","color":"Esmeralda","colorHex":"#c9a96e","cost":30,"createdAt":1785966574497,"gender":"Feminino","groupId":"vmsgmdwgwp6392","id":"vmsgmdwgwp6392","jeans":false,"name":"Sandália baixa básica","photo":null,"photos":[],"price":59.9,"priceCard":65.9,"promo":false,"ref":"TR042","sizes":[{"qty":1,"size":"36"}],"subcategory":"Sandálias"},{"category":"Calçados","color":"Preta","colorHex":"#1a1a1a","cost":30,"createdAt":1785966915248,"gender":"Feminino","groupId":"vmsgml7e8nh5hj","id":"vmsgml7e8nh5hj","jeans":false,"name":"Sandália baixa básica","photo":null,"photos":[],"price":59.9,"priceCard":65.9,"promo":false,"ref":"TR043","sizes":[{"qty":1,"size":"36"},{"qty":1,"size":"37"}],"subcategory":""},{"category":"Calçados","color":"Preta","colorHex":"#1a1a1a","cost":35,"createdAt":1785967457795,"gender":"Feminino","groupId":"vmsgmwu0wipd63","id":"vmsgmwu0wipd63","jeans":false,"name":"Sandália salto bloco tiras","photo":null,"photos":[],"price":65.9,"priceCard":69.9,"promo":false,"ref":"TR044","sizes":[{"qty":1,"size":"37"}],"subcategory":""},{"category":"Moda Masculina","color":"Cinza","colorHex":"#9a9a9a","cost":44.9,"createdAt":1786296550011,"gender":"Masculino","groupId":"vmsm2uf7f1f2w9","id":"vmsm2uf7f1f2w9","jeans":false,"name":"Calça masculina esportiva","photo":null,"photos":[],"price":59.9,"priceCard":65.9,"promo":false,"ref":"TR045","sizes":[{"qty":0,"size":"P"},{"qty":0,"size":"M"}],"subcategory":"Calças"},{"category":"Moda Masculina","color":"Cinza","colorHex":"#9a9a9a","cost":44.9,"createdAt":1786296644769,"gender":"Masculino","groupId":"vmsm2wgbl9yeo4","id":"vmsm2wgbl9yeo4","jeans":false,"name":"Blusa de frio esportiva","photo":null,"price":59.9,"priceCard":65.9,"promo":false,"ref":"TR046","sizes":[{"qty":0,"size":"P"},{"qty":0,"size":"M"}],"subcategory":"Blusas"},{"category":"Moda Feminina","color":"Bege","colorHex":"#d8c3a0","cost":20.93,"createdAt":1786307176986,"gender":"Feminino","groupId":"vmsm96716ln8f1","id":"vmsm96716ln8f1","jeans":false,"name":"Camisa estampa","photo":null,"photos":[],"price":35.9,"priceCard":39.9,"promo":false,"ref":"TR047","sizes":[{"qty":0,"size":"P"}],"subcategory":"Camisas"},{"category":"Calçados","color":"Preto","colorHex":"#1a1a1a","cost":20.93,"createdAt":1786307699611,"gender":"Masculino","groupId":"vmsm9heaja66zu","id":"vmsm9heaja66zu","jeans":false,"name":"Chinelo Cartago","photo":null,"photos":[],"price":35,"priceCard":39.9,"promo":false,"ref":"TR048","sizes":[{"qty":0,"size":"41"},{"qty":1,"size":"40"}],"subcategory":"Chinelos"},{"category":"Moda Feminina","color":"Estampado","colorHex":"#c9a96e","cost":76.93,"createdAt":1786308001960,"gender":"Feminino","groupId":"vmsm9nvl33m8mn","id":"vmsm9nvl33m8mn","jeans":false,"name":"Vestido Midi Viscolinho","photo":null,"price":100,"priceCard":100,"promo":false,"ref":"TR049","sizes":[{"qty":0,"size":"P"}],"subcategory":""},{"category":"Moda Feminina","color":"Jeans","colorHex":"#4a6b8a","cost":53.99,"createdAt":1786310945433,"gender":"Feminino","groupId":"vmsmbeys81wht9","id":"vmsmbeys81wht9","jeans":false,"name":"Calça mom","photo":null,"price":80,"priceCard":85.9,"promo":false,"ref":"TR050","sizes":[{"qty":0,"size":"38"}],"subcategory":"Calças"},{"category":"Moda Feminina","color":"Vinho","colorHex":"#5e1a24","cost":25.93,"createdAt":1786316394527,"gender":"Feminino","groupId":"vmsmenrbyj5gsd","id":"vmsmenrbyj5gsd","jeans":false,"name":"Vestido Reto Midi microfibra","photo":null,"price":79.9,"priceCard":85.9,"promo":false,"ref":"TR051","sizes":[{"qty":0,"size":"G"}],"subcategory":"Vestidos"},{"category":"Moda Masculina","color":"Bege","colorHex":"#d8c3a0","cost":17.99,"createdAt":1786318919697,"gender":"Masculino","groupId":"vmsmg5vrlnafth","id":"vmsmg5vrlnafth","jeans":false,"name":"Camisa masculina","photo":null,"price":25,"priceCard":29.9,"promo":false,"ref":"TR052","sizes":[{"qty":0,"size":"M"}],"subcategory":"Camisas"},{"category":"Moda Masculina","color":"Preta","colorHex":"#1a1a1a","cost":29.9,"createdAt":1786319095845,"gender":"Masculino","groupId":"vmsmg9nol5mcr1","id":"vmsmg9nol5mcr1","jeans":false,"name":"Bermuda sarja masculina","photo":null,"price":49.9,"priceCard":55.9,"promo":false,"ref":"TR053","sizes":[{"qty":0,"size":"42"}],"subcategory":"Bermudas"},{"category":"Moda Feminina","color":"Preta","colorHex":"#1a1a1a","cost":21.99,"createdAt":1786495639555,"gender":"Feminino","groupId":"vmspddloj23xgk","id":"vmspddloj23xgk","jeans":false,"name":"Blusa feminina suplex","photo":null,"photos":[],"price":39.9,"priceCard":44.9,"promo":false,"ref":"TR054","sizes":[{"qty":1,"size":"P"},{"qty":1,"size":"M"},{"qty":1,"size":"G"}],"subcategory":"Blusas"},{"category":"Moda Feminina","color":"Vermelho","colorHex":"#c1272d","cost":21.99,"createdAt":1786498283785,"gender":"Feminino","groupId":"vmspddloj23xgk","id":"vmspey9zd336yr","jeans":false,"name":"Blusa feminina suplex","photo":null,"photos":[],"price":39.9,"priceCard":44.9,"promo":false,"ref":"TR055","sizes":[{"qty":1,"size":"P"},{"qty":1,"size":"M"},{"qty":1,"size":"G"}],"subcategory":"Blusas"},{"category":"Moda Feminina","color":"Branca","colorHex":"#ffffff","cost":21.99,"createdAt":1786499781077,"gender":"Feminino","groupId":"vmspddloj23xgk","id":"vmspfudatem1e5","jeans":false,"name":"Blusa feminina suplex","photo":null,"photos":[],"price":39.9,"priceCard":44.9,"promo":false,"ref":"TR056","sizes":[{"qty":1,"size":"P"},{"qty":1,"size":"M"},{"qty":1,"size":"G"}],"subcategory":"Blusas"},{"category":"Calçados","color":"Off white","colorHex":"#f5f0e6","cost":43.67,"createdAt":1786573993193,"gender":"Feminino","groupId":"vmsqo0zqgndoe4","id":"vmsqo0zqh6ngn7","jeans":false,"name":"Sandália flatform calce fácil","photo":null,"photos":[],"price":64.9,"priceCard":69.9,"promo":false,"ref":"TR057","sizes":[{"qty":1,"size":"39"}],"subcategory":"Sandálias"},{"category":"Calçados","color":"Preta","colorHex":"#1a1a1a","cost":43.67,"createdAt":1786574882903,"gender":"Feminino","groupId":"vmsqok28n96yp3","id":"vmsqok28nfeg1z","jeans":false,"name":"Rasteira Vizzano pedraria","photo":null,"photos":[],"price":59.9,"priceCard":64.9,"promo":false,"ref":"TR058","sizes":[{"qty":1,"size":"35"}],"subcategory":"Rasteiras"},{"category":"Calçados","color":"Off white","colorHex":"#f5f0e6","cost":33.48,"createdAt":1786575772884,"gender":"Feminino","groupId":"vmsqp34y94kxw5","id":"vmsqp34y9gzt0y","jeans":false,"name":"Sandália flatform taxas","photo":null,"photos":[],"price":59.9,"priceCard":64.9,"promo":false,"ref":"TR059","sizes":[{"qty":1,"size":"38"}],"subcategory":"Sandálias"},{"category":"Calçados","color":"Off white","colorHex":"#f5f0e6","cost":40.7,"createdAt":1786576288843,"gender":"Feminino","groupId":"vmsqpe72ikitdj","id":"vmsqpe72inwwju","jeans":false,"name":"Tamanho salto bloco acolchoado","photo":null,"photos":[],"price":59.9,"priceCard":64.9,"promo":false,"ref":"TR060","sizes":[{"qty":1,"size":"37"}],"subcategory":""},{"category":"Calçados","color":"Preta","colorHex":"#1a1a1a","cost":43.7,"createdAt":1786577277017,"gender":"Feminino","groupId":"vmsqpzdjsnvokj","id":"vmsqpzdjs0kahd","jeans":false,"name":"Sandália flatform com tiras","photo":null,"photos":[],"price":64.9,"priceCard":69.9,"promo":false,"ref":"TR061","sizes":[{"qty":1,"size":"38"}],"subcategory":"Sandálias"},{"category":"Moda Feminina","color":"Off white","colorHex":"#f5f0e6","cost":29.9,"createdAt":1786578427335,"gender":"Feminino","groupId":"vmsqqo150wxus0","id":"vmsqqo153xwqli","jeans":false,"name":"Blusa tricô tranças gola alta","photo":null,"photos":[],"price":39.9,"priceCard":44.9,"promo":false,"ref":"TR062","sizes":[{"qty":1,"size":"P"}],"subcategory":"Blusas"},{"category":"Moda Feminina","color":"Jeans","colorHex":"#4a6b8a","cost":56.9,"createdAt":1787044867481,"gender":"Feminino","groupId":"vmsygdgntjwobh","id":"vmsygdgnt9lobr","jeans":true,"name":"Calça mom cintura alta, detalhes","photo":null,"photos":[],"price":84.9,"priceCard":89.9,"promo":false,"ref":"TR063","sizes":[{"qty":1,"size":"38"}],"subcategory":"Calças"}];try{if(Array.isArray(INITIAL_CATALOG_DATA) && INITIAL_CATALOG_DATA.length){lastCatalogData=INITIAL_CATALOG_DATA;document.getElementById("errorState").style.display="none";renderCatalog(INITIAL_CATALOG_DATA);} else {var cachedRaw=localStorage.getItem(CATALOG_CACHE_KEY);if(cachedRaw){var cachedData=JSON.parse(cachedRaw);if(Array.isArray(cachedData) && cachedData.length){lastCatalogData=cachedData;document.getElementById("errorState").style.display="none";renderCatalog(cachedData);}}}}catch(e){ /* sem dados iniciais disponiveis, segue o carregamento normal */ }document.addEventListener("DOMContentLoaded", function(){var firebaseConfig={"apiKey":"AIzaSyBj9JskW4G50_ziM1NLh3EX0EnoEluJx3A","authDomain":"familia-volei.firebaseapp.com","databaseURL":"https://familia-volei-default-rtdb.firebaseio.com","projectId":"familia-volei","storageBucket":"familia-volei.firebasestorage.app","messagingSenderId":"250165693676","appId":"1:250165693676:web:3ada372301612d336329c9"};firebase.initializeApp(firebaseConfig);var catalogRef=firebase.database().ref("catalogo");var configRef=firebase.database().ref("config");catalogRef.on("value",function(snapshot){var data=snapshot.val();var lista=[];if(Array.isArray(data)){ lista=data.filter(function(x){return x;}); }else if(data && typeof data==="object"){ lista=Object.keys(data).map(function(k){return data[k];}); }lastCatalogData=lista;try{ localStorage.setItem(CATALOG_CACHE_KEY, JSON.stringify(lista)); }catch(e){ /* espaco local cheio: sem problema, so nao guarda cache desta vez */ }document.getElementById("errorState").style.display="none";renderCatalog(lista);},function(err){document.getElementById("grid").innerHTML="";document.getElementById("errorState").style.display="block";console.error("Erro ao carregar catalogo do Firebase:",err);});configRef.on("value",function(snapshot){ applyConfig(snapshot.val()); });});</script></body></html>
